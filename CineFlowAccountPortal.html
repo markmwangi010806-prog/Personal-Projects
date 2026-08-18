@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CineFlow Creator Registration</title>
+  </head>
+  <body>
+    <header>
+      <h1>Join the CineFlow Creator Program</h1>
+      <p>
+        Register today to start sharing your content with millions of viewers
+        worldwide
+      </p>
+    </header>
+
+    <main>
+      <section id="promo">
+        <h2>Welcome Video & Audio Instructions</h2>
+
+        <article>
+          <h3>Creator Platform Overview</h3>
+          <video
+            controls
+            poster="https://via.placeholder.com/640x360.png?text=CineFlow+Promo+Video"
+            width="640"
+          >
+            <source src="promo.mp4" type="video/mp4" />
+            <source src="promo.webm" type="video/webm" />
+          </video>
+        </article>
+
+        <article>
+          <h3>Helpful Tips for Registration</h3>
+          <audio controls>
+            <source src="helpful-tips.mp3" type="audio/mpeg" />
+            <source src="helpful-tips.ogg" type="audio/ogg" />
+          </audio>
+        </article>
+      </section>
+
+      <section id="registration">
+        <form
+          action="/submit-registration"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <p>
+              <label for="fullname">Full Name:</label><br />
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="e.g. Shakira Madjozi"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="username"
+                >Username (Alphanumeric only, no spaces):</label
+              ><br />
+              <input
+                type="text"
+                id="username"
+                name="username"
+                pattern="[a-zA-Z0-9]+"
+                placeholder="e.g. CreatorJohn99"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="email">Email Address:</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="e.g. shakira@example.com"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="password">Password (Minimum 8 characters):</label
+              ><br />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="8"
+                placeholder="Enter secure password"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="dob">Date of Birth (Must be 18+):</label><br />
+              <!-- max attribute ensures age requirement of 18+ based on 2026 -->
+              <input
+                type="date"
+                id="dob"
+                name="dob"
+                max="2008-08-18"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="profile_picture"
+                >Profile Picture (.jpg or .png only):</label
+              ><br />
+              <input
+                type="file"
+                id="profile_picture"
+                name="profile_picture"
+                accept=".jpg, .png"
+                required
+              />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Channel Details</legend>
+
+            <div>
+              <p>Content Genres (Select all that apply):</p>
+              <input type="checkbox" id="tech" name="genres" value="tech" />
+              <label for="tech">Tech</label><br />
+
+              <input
+                type="checkbox"
+                id="lifestyle"
+                name="genres"
+                value="lifestyle"
+              />
+              <label for="lifestyle">Lifestyle</label><br />
+
+              <input type="checkbox" id="gaming" name="genres" value="gaming" />
+              <label for="gaming">Gaming</label>
+            </div>
+
+            <p>
+              <label for="upload_volume"
+                >Expected Weekly Upload Volume (0 to 10 videos):</label
+              ><br />
+              <input
+                type="range"
+                id="upload_volume"
+                name="upload_volume"
+                min="0"
+                max="10"
+                value="3"
+              />
+            </p>
+          </fieldset>
+
+          <p>
+            <button type="submit">Submit Registration</button>
+            <button type="reset">Reset Form</button>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 CineFlow Account Portal.All rights reserved</p>
+    </footer>
+  </body>
+</html>
