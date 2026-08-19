@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aura Tech - Premium Electronics Product Showcase"
+    />
+    <title>Aura Tech | Premium Electronics Showcase</title>
+    <link rel="stylesheet" href="E-CommerceProductShowcase.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="brand">Aura<span>Tech</span></a>
+        <div class="nav-controls">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+            <span class="theme-icon">🌙</span>
+          </button>
+          <button
+            id="cart-toggle"
+            class="btn-icon cart-btn"
+            aria-label="Open Shopping Cart"
+          >
+            🛒 <span class="cart-badge">2</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Next-Gen Tech Essentials</h1>
+        <p>
+          Elevate your digital setup with high-performance gear built for
+          precision.
+        </p>
+      </section>
+
+      
+
+      <section
+        class="controls-bar"
+        aria-label="Product Filtering and Sorting Controls"
+      >
+        <div class="filter-group">
+          <label for="category-filter" class="control-label">
+            <span class="label-icon">🔍</span> Category:
+          </label>
+          <div class="select-wrapper">
+            <select id="category-filter" class="control-select">
+              <option value="all">All Categories</option>
+              <option value="audio">Audio</option>
+              <option value="wearables">Wearables</option>
+              <option value="accessories">Accessories</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="sort-group">
+          <label for="sort-select" class="control-label">
+            <span class="label-icon">↕️</span> Sort By:
+          </label>
+          <div class="select-wrapper">
+            <select id="sort-select" class="control-select">
+              <option value="featured">Featured</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-grid" id="product-grid">
+        <article class="product-card" data-id="1">
+          <div class="card-image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80"
+              alt="Aura Noise-Canceling Wireless Headphones"
+              class="product-img"
+              loading="lazy"
+            />
+            <button
+              class="btn-quick-view"
+              aria-label="Quick View Aura Headphones"
+            >
+              Quick View
+            </button>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Audio</span>
+            <h2 class="card-title">Aura Studio ANC Headphones</h2>
+            <div class="card-rating" aria-label="Rating 4.8 out of 5 stars">
+              ★★★★★ <span>(4.8)</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-price">$299.99</span>
+              <button class="btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="2">
+          <div class="card-image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80"
+              alt="Aura Pulse Smartwatch"
+              class="product-img"
+              loading="lazy"
+            />
+            <button
+              class="btn-quick-view"
+              aria-label="Quick View Aura Pulse Smartwatch"
+            >
+              Quick View
+            </button>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Wearables</span>
+            <h2 class="card-title">Aura Pulse Smartwatch</h2>
+            <div class="card-rating" aria-label="Rating 4.6 out of 5 stars">
+              ★★★★☆ <span>(4.6)</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-price">$199.99</span>
+              <button class="btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="3">
+          <div class="card-image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&q=80"
+              alt="Aura Mechanical Keyboard"
+              class="product-img"
+              loading="lazy"
+            />
+            <button
+              class="btn-quick-view"
+              aria-label="Quick View Aura Mechanical Keyboard"
+            >
+              Quick View
+            </button>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Accessories</span>
+            <h2 class="card-title">Pro Type Wireless Mechanical Keyboard</h2>
+            <div class="card-rating" aria-label="Rating 4.9 out of 5 stars">
+              ★★★★★ <span>(4.9)</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-price">$149.99</span>
+              <button class="btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="4">
+          <div class="card-image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500&q=80"
+              alt="Aura Precision Ergonomic Mouse"
+              class="product-img"
+              loading="lazy"
+            />
+            <button
+              class="btn-quick-view"
+              aria-label="Quick View Precision Ergonomic Mouse"
+            >
+              Quick View
+            </button>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Accessories</span>
+            <h2 class="card-title">Precision Ergonomic Wireless Mouse</h2>
+            <div class="card-rating" aria-label="Rating 4.5 out of 5 stars">
+              ★★★★☆ <span>(4.5)</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-price">$79.99</span>
+              <button class="btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="5">
+          <div class="card-image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&q=80"
+              alt="Aura SoundSphere Bluetooth Speaker"
+              class="product-img"
+              loading="lazy"
+            />
+            <button
+              class="btn-quick-view"
+              aria-label="Quick View SoundSphere Speaker"
+            >
+              Quick View
+            </button>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Audio</span>
+            <h2 class="card-title">SoundSphere Portable Speaker</h2>
+            <div class="card-rating" aria-label="Rating 4.7 out of 5 stars">
+              ★★★★☆ <span>(4.7)</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-price">$129.99</span>
+              <button class="btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="6">
+          <div class="card-image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&q=80"
+              alt="Aura AirBuds Pro"
+              class="product-img"
+              loading="lazy"
+            />
+            <button
+              class="btn-quick-view"
+              aria-label="Quick View Aura AirBuds Pro"
+            >
+              Quick View
+            </button>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Audio</span>
+            <h2 class="card-title">Aura AirBuds Pro Wireless</h2>
+            <div class="card-rating" aria-label="Rating 4.8 out of 5 stars">
+              ★★★★★ <span>(4.8)</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-price">$179.99</span>
+              <button class="btn-add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <aside id="cart-sidebar" class="cart-sidebar" aria-hidden="true">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="cart-close" class="btn-icon" aria-label="Close Cart">
+          &times;
+        </button>
+      </div>
+      <div class="cart-body">
+        <div class="cart-item">
+          <img
+            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&q=80"
+            alt="Thumbnail"
+          />
+          <div class="cart-item-info">
+            <h4>Aura Studio ANC</h4>
+            <p>$299.99 x 1</p>
+          </div>
+        </div>
+        <div class="cart-item">
+          <img
+            src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=100&q=80"
+            alt="Thumbnail"
+          />
+          <div class="cart-item-info">
+            <h4>Pro Type Keyboard</h4>
+            <p>$149.99 x 1</p>
+          </div>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span>$449.98</span>
+        </div>
+        <button class="btn-checkout">Proceed to Checkout</button>
+      </div>
+    </aside>
+    <div id="cart-overlay" class="overlay"></div>
+
+    <div id="product-modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button
+          id="modal-close"
+          class="btn-icon modal-close"
+          aria-label="Close Product Detail Modal"
+        >
+          &times;
+        </button>
+        <div class="modal-body">
+          <img id="modal-img" src="" alt="Modal Product Image" />
+          <div class="modal-details">
+            <span id="modal-category" class="card-category">Category</span>
+            <h2 id="modal-title">Product Title</h2>
+            <div id="modal-rating" class="card-rating">★★★★★ (5.0)</div>
+            <p id="modal-price" class="card-price">$0.00</p>
+            <p class="modal-description">
+              Experience uncompromised sound clarity and industry-leading noise
+              cancellation engineered for comfort and long listening sessions.
+            </p>
+            <button class="btn-add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
