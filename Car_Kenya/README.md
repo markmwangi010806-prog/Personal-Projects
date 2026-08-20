@@ -78,13 +78,13 @@ An integrated inquiry form that allows buyers to submit custom car sourcing and 
 git clone https://github.com/markmwangi010806-prog/read-me.git
 ```
 
-2. Navigate to the project directory:
+1. Navigate to the project directory:
 
 ```bash
 cd read-me
 ```
 
-3. Open the project in your preferred code editor and launch `carkenya.html` in your browser.
+1. Open the project in your preferred code editor and launch `carkenya.html` in your browser.
 
 ## Contributing
 
@@ -98,13 +98,13 @@ To contribute:
 git clone https://github.com/markmwangi010806-prog/read-me.git
 ```
 
-2. Create a new branch for your feature or bug fix.
+1. Create a new branch for your feature or bug fix.
 
-3. Make your changes and test them thoroughly.
+2. Make your changes and test them thoroughly.
 
-4. Submit a Pull Request describing your contribution.
+3. Submit a Pull Request describing your contribution.
 
-5. Document any significant changes by opening an issue when appropriate.
+4. Document any significant changes by opening an issue when appropriate.
 
 Please follow good commit message practices and include tests where applicable.
 
