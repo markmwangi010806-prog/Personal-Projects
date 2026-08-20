@@ -1,58 +1,115 @@
 # Car Kenya
 
-Car Kenya is a lightweight,responsive web platform designed to streamline vehicle discovery,automotive sourcing,and buyer guidance within the Kenyan market. Built using semantic HTML and pure CSS,the platform connects prospective car owners with quality-checked vehicles,transparent specs,and essential automotive services without requiring heavy,complex scripts or external dependencies.
+Car Kenya is a lightweight, responsive web platform designed to streamline vehicle discovery, automotive sourcing, and buyer guidance within the Kenyan market. Built using semantic HTML and pure CSS, the platform connects prospective car owners with quality-checked vehicles, transparent specifications, and essential automotive services without requiring heavy, complex scripts or external dependencies.
 
 ## Features
 
-The best thing about our web application is based here,on the search bar when you want a specific car you just type in the words and it gives you all details about it eg the manufacturer year of the car,the condition of the car,the color,the importation cost of the car and the price of the car.
+One of the key features of Car Kenya is its intelligent search functionality. When users want information about a specific vehicle, they simply enter the car model into the search bar. The platform then provides comprehensive details, including:
 
-### Problem
+- Manufacturer year
+- Vehicle condition
+- Vehicle color
+- Importation cost
+- Market price
 
-Car buyers in Kenya often face significant hurdles when searching for vehicles online:
+This allows buyers to access important information quickly and make informed purchasing decisions.
 
-Fragmented Information: Vehicle listings are often spread across unverified social media pages and scattered listing platforms.
+## Problem
 
-Lack of Transparency: Key details such as condition (e.g.,Foreign Used vs. Local Used),pricing,and exact engine specifications are often missing or hidden.
+Car buyers in Kenya often face significant challenges when searching for vehicles online:
 
-Slow, Cluttered Websites: Many existing dealership platforms rely on heavy frameworks that run poorly on mobile devices or slow internet connections.
+### Fragmented Information
 
-#### Solution
+Vehicle listings are frequently scattered across unverified social media pages and multiple listing platforms, making it difficult to find reliable information.
 
-Car Kenya addresses these challenges by offering:
+### Lack of Transparency
 
-Centralized & Transparent Inventory: Clear pricing in KSh, detailed specifications, and verified vehicle conditions displayed upfront.
+Important details such as vehicle condition (Foreign Used vs. Local Used), pricing, and engine specifications are often missing or unclear.
 
-Pure HTML/CSS Native Search:Fast,client-side vehicle suggestions using native HTML <datalist> elements for instant model,type and budget matching without page reload errors.
+### Slow and Cluttered Websites
 
-Lightweight & Fully Responsive Architecture: A CSS Grid layout optimized for seamless browsing on mobile devices and desktop screens alike.
+Many dealership websites rely on heavy frameworks and unnecessary scripts, resulting in poor performance on mobile devices and slower internet connections.
 
-#### Structure
+## Solution
 
-The application features a single-page structured layout with multi-page navigation capability across 5 core sections:
+Car Kenya addresses these challenges by providing:
 
-Home (#home):Hero banner detailing Car Kenya's core mission and welcome value proposition.
+### Centralized and Transparent Inventory
 
-Services (#services): Comprehensive breakdown of vehicle sales,sourcing,inspection,consultation and financing assistance.
+Clear pricing in Kenyan Shillings (KSh), detailed vehicle specifications, and verified vehicle conditions are displayed upfront.
 
-Products/Inventory (#inventory):Interactive vehicle catalogue paired with a pure HTML autocomplete search bar and styled product cards.
+### Pure HTML/CSS Native Search
 
-About Us (#about):Background on Car Kenya's history, values and commitment to transparent car ownership.
+Fast, client-side vehicle suggestions powered by native HTML `<datalist>` elements enable instant model, type, and budget matching without page reloads.
 
-Contact Us (#contact): Integrated inquiry form allowing buyers to submit custom car sourcing and inspection requests.
+### Lightweight and Fully Responsive Architecture
 
-### Installation
+A CSS Grid-based layout ensures seamless browsing across desktop and mobile devices.
 
-1.git clone <https://github.com/markmwangi010806-prog/read-me.git>
+## Structure
+
+The application features a single-page layout with multi-page navigation capability across five core sections:
+
+### Home (`#home`)
+
+A hero banner introducing Car Kenya's mission and value proposition.
+
+### Services (`#services`)
+
+A comprehensive breakdown of vehicle sales, sourcing, inspections, consultations, and financing assistance.
+
+### Products / Inventory (`#inventory`)
+
+An interactive vehicle catalog paired with a pure HTML autocomplete search bar and professionally styled product cards.
+
+### About Us (`#about`)
+
+Information about Car Kenya's background, values, and commitment to transparent vehicle ownership.
+
+### Contact Us (`#contact`)
+
+An integrated inquiry form that allows buyers to submit custom car sourcing and inspection requests.
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/markmwangi010806-prog/read-me.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd read-me
+```
+
+3. Open the project in your preferred code editor and launch `carkenya.html` in your browser.
 
 ## Contributing
 
-Contributions are welcome. To contribute:
-1.Clone the project
- git clone <https://github.com/markmwangi010806-prog/read-me.git>
-2.Make a pull
-3.Document the contribution as an issue
-Please follow good commit message practices and include tests where appropriate.
+Contributions are welcome.
+
+To contribute:
+
+1. Clone the project:
+
+```bash
+git clone https://github.com/markmwangi010806-prog/read-me.git
+```
+
+2. Create a new branch for your feature or bug fix.
+
+3. Make your changes and test them thoroughly.
+
+4. Submit a Pull Request describing your contribution.
+
+5. Document any significant changes by opening an issue when appropriate.
+
+Please follow good commit message practices and include tests where applicable.
 
 ## License
 
-This project was created by Mark and build by@markmwangi010806-prog
+This project was created by **Mark Mwangi** and developed by **@markmwangi010806-prog**.
+
+© 2026 Car Kenya. All rights reserved.
