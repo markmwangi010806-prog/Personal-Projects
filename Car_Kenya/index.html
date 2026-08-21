@@ -3,184 +3,461 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Car Kenya</title>
+
+    <meta
+      name="description"
+      content="Car Kenya — discover quality vehicles, source your dream car, and get trusted automotive services in Kenya."
+    />
+
+    <title>Car Kenya | Find Your Dream Car</title>
+
     <link rel="stylesheet" href="Style.css" />
   </head>
-  <body class="layout-grid">
-    <header class="header">
+
+  <body>
+    <header class="site-header">
       <div class="header-container">
-      <a href="carkenya.html">
-        <img
-          src="CarKenyaLogo.png"
-          alt="image of Car Kenya Logo,a black BMW M3,a car doing burnout smoke rising up"
-        />
-      </a>
-      <h1>Welcome to Car Kenya where your dream car comes to reality.</h1>
-      <nav>
-        <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#Services">Services</a></li>
-          <li><a href="#Products">Products</a></li>
-          <li><a href="#About">About</a></li>
-          <li><a href="#Contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="nav-actions">
-        <a href="#contact" class="btn-primary">Get in Touch</a>
+        <a href="carkenya.html" class="logo">
+          <img
+            src="CarKenyaLogo.png"
+            alt="Car Kenya Logo"/>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#vehicles">Vehicles</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="header-button"> Get in Touch </a>
       </div>
     </header>
-    <main class="main-content">
-        <h2>Home</h2>
-       <section id="home" class="hero">
-            <h1>Find Your Dream Vehicle</h1>
-            <p>Authentic • Classic • Luxurious vehicles curated in Kenya</p>
-        <p>
-          Welcome to Car Kenya,your trusted destination for finding the perfect
-          vehicle.Whether you are looking for a reliable family car,a stylish
-          SUV,a powerful performance vehicle,or an affordable option for
-          everyday driving,we are here to make your car-buying journey simple
-          and stress free.Explore our wide selection of quality
-          vehicles,discover flexible options that suit your budget,and get the
-          support you need from choosing the right car to driving it home.At Car
-          Kenya,we believe your dream car is more than just a vehicle it is the
-          beginning of your next journey.
-        </p>
-      </section>
-      <section id="services">
-        <h2>Services</h2>
-        <p>
-          At Car Kenya, we provide reliable automotive services designed to make
-          your car-buying experience easy and convenient. From helping you find
-          the right vehicle and sourcing specific models to vehicle inspections
-          and personalized guidance, our team is committed to helping you make
-          confident decisions. Whether you are buying your first car or
-          upgrading to your next vehicle, we are here to support you every step
-          of the way.
-        </p>
-        <ul>
-          <li>Vehicle Sales</li>
-          <li>Car Sourcing</li>
-          <li>Vehicle Inspection</li>
-          <li>Car Consultation</li>
-          <li>Vehicle Financing Assistance</li>
-        </ul>
-      </section>
-      <section id="inventory" class="inventory-section">
-        <h2>Featured Vehicles</h2>
-        <div class="card-grid">
-          <div class="card-image">
-          <article class="car-card">
-           <img src="a sleek black BMW 2018.jpg" alt="image of a sleek black BMW M3"/>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="hero-label">PREMIUM AUTOMOTIVE EXPERIENCE</p>
+
+          <h1>
+            Find Your<br />
+            <span>Dream Vehicle.</span>
+          </h1>
+
+          <p class="hero-description">
+            Discover quality vehicles, trusted sourcing, and professional
+            automotive services built for Kenya.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#vehicles" class="btn btn-primary"> Explore Vehicles </a>
+
+            <a href="#services" class="btn btn-outline"> Import a Vehicle </a>
           </div>
-          <div class="card-details">
-            <h3>BMW M3</h3>
-            <p><strong>Year:</strong> 2018</p>
-            <p><strong>Condition:</strong> Foreign Used (Mint)</p>
-            <p><strong>Price:</strong> KSh 1,650,000</p>
-            <button type="button">View Details</button>
-            <p>
-              Discover a wide selection of quality vehicles at Car Kenya,
-              carefully chosen to meet different lifestyles, preferences, and
-              budgets. From fuel-efficient cars and comfortable family vehicles
-              to spacious SUVs and powerful performance cars, we offer options
-              for every type of driver. Browse our collection, compare your
-              choices, and find a vehicle that combines style, reliability,
-              comfort, and value.
-            </p>
-            <search>
-              <form action="https://www.carfolio.com/search" method="get" target="_blank">
-                <input type="text" name="q" placeholder="Search the web..." required>
-                <button type="submit">Search</button>
-              </form>
-            </search>
+        </div>
+
+        <div class="vehicle-search">
+          <div class="search-heading">
+            <span>Find Your Vehicle</span>
+            <small>Search our collection</small>
+          </div>
+
+          <div class="search-fields">
+            <div class="search-field">
+              <label for="make">Make</label>
+
+              <select id="make">
+                <option value="">All Makes</option>
+                <option value="BMW">BMW</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Audi">Audi</option>
+                <option value="Range Rover">Range Rover</option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <label for="model">Model</label>
+
+              <select id="model">
+                <option value="">All Models</option>
+                <option value="M3">M3</option>
+                <option value="C-Class">C-Class</option>
+                <option value="Land Cruiser">Land Cruiser</option>
+                <option value="Q5">Q5</option>
+                <option value="Sport">Sport</option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <label for="year">Year</label>
+
+              <select id="year">
+                <option value="">Any Year</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <label for="price">Maximum Price</label>
+
+              <select id="price">
+                <option value="">Any Price</option>
+                <option value="2000000">KSh 2M</option>
+                <option value="5000000">KSh 5M</option>
+                <option value="10000000">KSh 10M</option>
+                <option value="20000000">KSh 20M</option>
+                <option value="50000000">KSh 50M</option>
+              </select>
+            </div>
+
+            <button type="button" class="search-button">Search</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="vehicles" class="vehicles-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">OUR COLLECTION</p>
+
+            <h2>Featured Vehicles</h2>
+          </div>
+
+          <a href="#" class="view-all"> View All Vehicles → </a>
+        </div>
+
+        <div class="vehicle-grid">
+          <article class="vehicle-card">
+            <div class="vehicle-image">
+              <img src="a sleek black BMW 2018.jpg" alt="Black BMW M3" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="vehicle-info">
+              <p class="vehicle-category">PERFORMANCE</p>
+
+              <h3>BMW M3</h3>
+
+              <div class="vehicle-specs">
+                <span>2018</span>
+                <span>Automatic</span>
+                <span>Petrol</span>
+              </div>
+
+              <div class="vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 1,650,000</strong>
+                </div>
+
+                <a href="#" class="details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- VEHICLE 2 -->
+
+          <article class="vehicle-card">
+            <div class="vehicle-image">
+              <img src="mercedes.jpg" alt="Mercedes-Benz luxury vehicle" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="vehicle-info">
+              <p class="vehicle-category">LUXURY</p>
+
+              <h3>Mercedes-Benz C-Class</h3>
+
+              <div class="vehicle-specs">
+                <span>2022</span>
+                <span>Automatic</span>
+                <span>Petrol</span>
+              </div>
+
+              <div class="vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 5,800,000</strong>
+                </div>
+
+                <a href="#" class="details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- VEHICLE 3 -->
+
+          <article class="vehicle-card">
+            <div class="vehicle-image">
+              <img src="toyota.jpg" alt="Toyota Land Cruiser" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="vehicle-info">
+              <p class="vehicle-category">SUV</p>
+
+              <h3>Toyota Land Cruiser</h3>
+
+              <div class="vehicle-specs">
+                <span>2023</span>
+                <span>Automatic</span>
+                <span>Diesel</span>
+              </div>
+
+              <div class="vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 12,500,000</strong>
+                </div>
+
+                <a href="#" class="details-button"> View Details </a>
+              </div>
+            </div>
           </article>
         </div>
       </section>
-      <section id="about">
-        <h2>About Us</h2>
-        <p>
-          Car Kenya was created with one goal in mind: to make finding and
-          owning your dream car a simple, transparent, and enjoyable experience.
-          We are passionate about connecting customers with quality vehicles
-          while providing honest information and dependable service. Our
-          commitment to customer satisfaction means we take the time to
-          understand your needs and help you find a vehicle that fits both your
-          lifestyle and budget.
-        </p>
+
+      <section class="why-section">
+        <div class="section-heading centered">
+          <p class="section-label">WHY CAR KENYA</p>
+
+          <h2>More Than Just A Car.</h2>
+
+          <p>
+            We make finding and owning your next vehicle simple, transparent,
+            and stress-free.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-number">01</div>
+
+            <h3>Quality Vehicles</h3>
+
+            <p>
+              Carefully selected vehicles that meet our standards for quality,
+              reliability, and value.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-number">02</div>
+
+            <h3>Trusted Sourcing</h3>
+
+            <p>
+              Looking for a specific vehicle? We help source the right car
+              according to your requirements.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-number">03</div>
+
+            <h3>Vehicle Inspection</h3>
+
+            <p>
+              Get professional guidance and inspection assistance before making
+              your purchase.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-number">04</div>
+
+            <h3>Customer Support</h3>
+
+            <p>
+              From choosing your vehicle to completing the process, we're here
+              to help.
+            </p>
+          </div>
+        </div>
       </section>
-      <section id="contact">
-        <h2>Contact Us</h2>
-        <p>
-          Ready to find your next car? Car Kenya is here to help. Whether you
-          have questions about a vehicle, need assistance finding a specific
-          model, or simply want to learn more about our services, our team is
-          ready to assist you. Get in touch with us today by phone or email, and
-          let us help you take the next step toward owning the car you've always
-          wanted.
-        </p>
-        <form id="contact-form">
-          <label for="user-name">Full Name</label>
-          <input
-            type="text"
-            id="user-name"
-            name="name"
-            placeholder="John Doe"
-            required
-          />
 
-          <label for="user-email">Email Address</label>
-          <input
-            type="email"
-            id="user-email"
-            name="email"
-            placeholder="john@example.com"
-            required
-          />
+      <section class="import-section">
+        <div class="import-overlay"></div>
 
-          <label for="car-inquiry">Inquiry Type</label>
-          <select id="car-inquiry" name="inquiry">
-            <option value="general">General Question</option>
-            <option value="sourcing">Car Sourcing Request</option>
-            <option value="inspection">Vehicle Inspection</option>
-            <option value="Financing">Vehicle pricinga</option>
-          </select>
+        <div class="import-content">
+          <p class="section-label">CAR SOURCING & IMPORT</p>
 
-          <label for="user-message">Message</label>
-          <textarea
-            id="user-message"
-            name="message"
-            rows="1"
-            placeholder="Tell us what car you're looking for..."
-          ></textarea>
+          <h2>
+            Can't Find<br />
+            What You're Looking For?
+          </h2>
 
-          <button type="submit">Send Message</button>
+          <p>
+            Tell us the vehicle you want and let Car Kenya help you source it.
+          </p>
+
+          <a href="#contact" class="btn btn-primary"> Start Your Request </a>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="about-image">
+          <img src="about-car.jpg" alt="Luxury vehicle" />
+        </div>
+
+        <div class="about-content">
+          <p class="section-label">ABOUT CAR KENYA</p>
+
+          <h2>
+            Your Journey<br />
+            Starts Here.
+          </h2>
+
+          <p>
+            Car Kenya was created with one goal: to make finding and owning your
+            dream vehicle a simple, transparent, and enjoyable experience.
+          </p>
+
+          <p>
+            Whether you're looking for a performance car, luxury SUV, family
+            vehicle, or a specific imported model, we're here to help you find
+            the right car.
+          </p>
+
+          <a href="#contact" class="text-button"> Learn More About Us → </a>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="contact-heading">
+          <p class="section-label">GET IN TOUCH</p>
+
+          <h2>
+            Let's Find Your<br />
+            Next Vehicle.
+          </h2>
+
+          <p>
+            Have a question, need a specific vehicle, or want help with
+            sourcing? Get in touch with Car Kenya.
+          </p>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="user-name"> Full Name </label>
+
+              <input
+                type="text"
+                id="user-name"
+                name="name"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="user-email"> Email Address </label>
+
+              <input
+                type="email"
+                id="user-email"
+                name="email"
+                placeholder="john@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="car-inquiry"> What can we help you with? </label>
+
+            <select id="car-inquiry" name="inquiry">
+              <option value="vehicle">Buying a Vehicle</option>
+
+              <option value="sourcing">Car Sourcing</option>
+
+              <option value="inspection">Vehicle Inspection</option>
+
+              <option value="import">Vehicle Import</option>
+
+              <option value="general">General Question</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="user-message"> Message </label>
+
+            <textarea
+              id="user-message"
+              name="message"
+              rows="6"
+              placeholder="Tell us what vehicle you're looking for..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Send Message</button>
         </form>
       </section>
     </main>
-    <footer class="footer">
-     <div class="footer-grid">
-            <div class="footer-col">
-                <h3>Car Kenya</h3>
-                <p>Providing authentic, classic, and high-quality vehicles with transparent pricing.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-     </div>
-            <div class="footer-col">
-     <h4>Contact Info</h4>
-                <p>Email: info@carkenya.com</p>
-                <p>Phone: +254 797 979 704</p>
-    </div>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="CarKenyaLogo.png" alt="Car Kenya" />
+
+          <p>
+            Premium vehicles, trusted sourcing, and professional automotive
+            services in Kenya.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+
+          <a href="#home">Home</a>
+          <a href="#vehicles">Vehicles</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Services</h3>
+
+          <a href="#services">Vehicle Sales</a>
+          <a href="#services">Car Sourcing</a>
+          <a href="#services">Vehicle Inspection</a>
+          <a href="#services">Import Assistance</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+
+          <p>Nairobi, Kenya</p>
+
+          <p>+254 797 979 704</p>
+
+          <p>info@carkenya.com</p>
+        </div>
+      </div>
+
       <div class="footer-bottom">
-      <p>&copy; 2026 Car Kenya. All rights reserved.</p>
-    </div>
+        <p>© 2026 Car Kenya. All rights reserved.</p>
+
+        <p>Built for the road ahead.</p>
+      </div>
     </footer>
   </body>
 </html>
