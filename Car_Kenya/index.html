@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
       name="description"
-      content="Car Kenya — discover quality vehicles, source your dream car, and get trusted automotive services in Kenya."
+      content="Car Kenya - Discover quality vehicles, trusted car sourcing, vehicle inspection and automotive services in Kenya."
     />
 
-    <title>Car Kenya | Find Your Dream Car</title>
+    <title>Car Kenya | Find Your Dream Vehicle</title>
 
     <link rel="stylesheet" href="Style.css" />
   </head>
@@ -17,19 +18,23 @@
   <body>
     <header class="site-header">
       <div class="header-container">
-        <a href="carkenya.html" class="logo">
+        <a href="#home" class="logo">
           <img src="CarKenyaLogo.png" alt="Car Kenya Logo" />
         </a>
 
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#home">Home</a>
+
           <a href="#vehicles">Vehicles</a>
+
           <a href="#services">Services</a>
+
           <a href="#about">About</a>
+
           <a href="#contact">Contact</a>
         </nav>
 
-        <a href="#contact" class="header-button"> Get in Touch </a>
+        <a href="#contact" class="header-button"> Get In Touch </a>
       </div>
     </header>
 
@@ -41,87 +46,114 @@
           <p class="hero-label">PREMIUM AUTOMOTIVE EXPERIENCE</p>
 
           <h1>
-            Find Your<br />
+            Find Your
             <span>Dream Vehicle.</span>
           </h1>
 
           <p class="hero-description">
-            Discover quality vehicles, trusted sourcing, and professional
+            Discover quality vehicles, trusted sourcing and professional
             automotive services built for Kenya.
           </p>
 
           <div class="hero-buttons">
             <a href="#vehicles" class="btn btn-primary"> Explore Vehicles </a>
 
-            <a href="#services" class="btn btn-outline"> Import a Vehicle </a>
+            <a href="#services" class="btn btn-outline"> Our Services </a>
           </div>
         </div>
 
         <div class="vehicle-search">
           <div class="search-heading">
-            <span>Find Your Vehicle</span>
-            <small>Search our collection</small>
+            <p>FIND YOUR VEHICLE</p>
+
+            <span> Search our collection </span>
           </div>
 
-          <div class="search-fields">
+          <form class="search-fields">
             <div class="search-field">
-              <label for="make">Make</label>
+              <label for="make"> Make </label>
 
-              <select id="make">
+              <select id="make" name="make">
                 <option value="">All Makes</option>
-                <option value="BMW">BMW</option>
-                <option value="Mercedes-Benz">Mercedes-Benz</option>
-                <option value="Toyota">Toyota</option>
-                <option value="Audi">Audi</option>
-                <option value="Range Rover">Range Rover</option>
+
+                <option value="bmw">BMW</option>
+
+                <option value="mercedes">Mercedes-Benz</option>
+
+                <option value="toyota">Toyota</option>
+
+                <option value="audi">Audi</option>
+
+                <option value="range-rover">Range Rover</option>
               </select>
             </div>
 
             <div class="search-field">
-              <label for="model">Model</label>
+              <label for="model"> Model </label>
 
-              <select id="model">
+              <select id="model" name="model">
                 <option value="">All Models</option>
-                <option value="M3">M3</option>
-                <option value="C-Class">C-Class</option>
-                <option value="Land Cruiser">Land Cruiser</option>
-                <option value="Q5">Q5</option>
-                <option value="Sport">Sport</option>
+
+                <option value="bmw-m3">BMW M3</option>
+
+                <option value="bmw-x5">BMW X5</option>
+
+                <option value="mercedes-c-class">Mercedes-Benz C-Class</option>
+
+                <option value="mercedes-gle">Mercedes-Benz GLE</option>
+
+                <option value="land-cruiser">Toyota Land Cruiser</option>
+
+                <option value="toyota-harrier">Toyota Harrier</option>
+
+                <option value="audi-q5">Audi Q5</option>
+
+                <option value="range-rover-sport">Range Rover Sport</option>
               </select>
             </div>
 
             <div class="search-field">
-              <label for="year">Year</label>
+              <label for="year"> Year </label>
 
-              <select id="year">
+              <select id="year" name="year">
                 <option value="">Any Year</option>
+
                 <option value="2026">2026</option>
+
                 <option value="2025">2025</option>
+
                 <option value="2024">2024</option>
+
                 <option value="2023">2023</option>
+
                 <option value="2022">2022</option>
+
                 <option value="2021">2021</option>
+
                 <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
               </select>
             </div>
 
             <div class="search-field">
-              <label for="price">Maximum Price</label>
+              <label for="price"> Maximum Price </label>
 
-              <select id="price">
+              <select id="price" name="price">
                 <option value="">Any Price</option>
+
                 <option value="2000000">KSh 2M</option>
+
                 <option value="5000000">KSh 5M</option>
+
                 <option value="10000000">KSh 10M</option>
+
                 <option value="20000000">KSh 20M</option>
+
                 <option value="50000000">KSh 50M</option>
               </select>
             </div>
 
-            <button type="button" class="search-button">Search</button>
-          </div>
+            <button type="submit" class="search-button">Search</button>
+          </form>
         </div>
       </section>
 
@@ -133,10 +165,12 @@
             <h2>Featured Vehicles</h2>
           </div>
 
-          <a href="#" class="view-all"> View All Vehicles → </a>
+          <a href="#vehicles" class="view-all"> View All Vehicles → </a>
         </div>
 
         <div class="vehicle-grid">
+          <!-- BMW -->
+
           <article class="vehicle-card">
             <div class="vehicle-image">
               <img src="BMW M3.jpg" alt="Black BMW M3" />
@@ -151,17 +185,20 @@
 
               <div class="vehicle-specs">
                 <span>2023</span>
+
                 <span>Automatic</span>
+
                 <span>Petrol</span>
               </div>
 
               <div class="vehicle-bottom">
                 <div>
-                  <small>PRICE</small>
-                  <strong>KSh 9,020,000</strong>
+                  <small> PRICE </small>
+
+                  <strong> KSh 9,020,000 </strong>
                 </div>
 
-                <a href="#" class="details-button"> View Details </a>
+                <a href="#contact" class="details-button"> View Details </a>
               </div>
             </div>
           </article>
@@ -170,7 +207,7 @@
             <div class="vehicle-image">
               <img
                 src="Mercedes Benz C-Class.jpg"
-                alt="Mercedes-Benz luxury vehicle"
+                alt="Mercedes-Benz C-Class"
               />
 
               <span class="vehicle-status"> Available </span>
@@ -183,17 +220,20 @@
 
               <div class="vehicle-specs">
                 <span>2019</span>
+
                 <span>Automatic</span>
+
                 <span>Petrol</span>
               </div>
 
               <div class="vehicle-bottom">
                 <div>
-                  <small>PRICE</small>
-                  <strong>KSh 2,092,000</strong>
+                  <small> PRICE </small>
+
+                  <strong> KSh 2,092,000 </strong>
                 </div>
 
-                <a href="#" class="details-button"> View Details </a>
+                <a href="#contact" class="details-button"> View Details </a>
               </div>
             </div>
           </article>
@@ -212,17 +252,52 @@
 
               <div class="vehicle-specs">
                 <span>2026</span>
+
                 <span>Automatic</span>
+
                 <span>Diesel</span>
               </div>
 
               <div class="vehicle-bottom">
                 <div>
-                  <small>PRICE</small>
-                  <strong>KSh 11,892,000</strong>
+                  <small> PRICE </small>
+
+                  <strong> KSh 11,892,000 </strong>
                 </div>
 
-                <a href="#" class="details-button"> View Details </a>
+                <a href="#contact" class="details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="vehicle-card">
+            <div class="vehicle-image">
+              <img src="Range Rover.jpg" alt="Range Rover luxury SUV" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="vehicle-info">
+              <p class="vehicle-category">LUXURY SUV</p>
+
+              <h3>Range Rover Sport</h3>
+
+              <div class="vehicle-specs">
+                <span>2024</span>
+
+                <span>Automatic</span>
+
+                <span>Petrol</span>
+              </div>
+
+              <div class="vehicle-bottom">
+                <div>
+                  <small> PRICE </small>
+
+                  <strong> KSh 14,500,000 </strong>
+                </div>
+
+                <a href="#contact" class="details-button"> View Details </a>
               </div>
             </div>
           </article>
@@ -236,25 +311,25 @@
           <h2>More Than Just A Car.</h2>
 
           <p>
-            We make finding and owning your next vehicle simple, transparent,
-            and stress-free.
+            We make finding and owning your next vehicle simple, transparent and
+            stress-free.
           </p>
         </div>
 
         <div class="benefits-grid">
-          <div class="benefit-card">
-            <div class="benefit-number">01</div>
+          <article class="benefit-card">
+            <span class="benefit-number"> 01 </span>
 
             <h3>Quality Vehicles</h3>
 
             <p>
               Carefully selected vehicles that meet our standards for quality,
-              reliability, and value.
+              reliability and value.
             </p>
-          </div>
+          </article>
 
-          <div class="benefit-card">
-            <div class="benefit-number">02</div>
+          <article class="benefit-card">
+            <span class="benefit-number"> 02 </span>
 
             <h3>Trusted Sourcing</h3>
 
@@ -262,10 +337,10 @@
               Looking for a specific vehicle? We help source the right car
               according to your requirements.
             </p>
-          </div>
+          </article>
 
-          <div class="benefit-card">
-            <div class="benefit-number">03</div>
+          <article class="benefit-card">
+            <span class="benefit-number"> 03 </span>
 
             <h3>Vehicle Inspection</h3>
 
@@ -273,10 +348,10 @@
               Get professional guidance and inspection assistance before making
               your purchase.
             </p>
-          </div>
+          </article>
 
-          <div class="benefit-card">
-            <div class="benefit-number">04</div>
+          <article class="benefit-card">
+            <span class="benefit-number"> 04 </span>
 
             <h3>Customer Support</h3>
 
@@ -284,50 +359,98 @@
               From choosing your vehicle to completing the process, we're here
               to help.
             </p>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section class="import-section">
-        <div class="import-overlay"></div>
+      <section id="services" class="services-section">
+        <div class="section-heading centered">
+          <p class="section-label">OUR SERVICES</p>
 
-        <div class="import-content">
-          <p class="section-label">CAR SOURCING & IMPORT</p>
-
-          <h2>
-            Can't Find<br />
-            What You're Looking For?
-          </h2>
+          <h2>Automotive Services Built Around You.</h2>
 
           <p>
-            Tell us the vehicle you want and let Car Kenya help you source it.
+            From finding your next vehicle to sourcing and inspection, Car Kenya
+            is here to make the process easier.
           </p>
+        </div>
 
-          <a href="#contact" class="btn btn-primary"> Start Your Request </a>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-number"> 01 </span>
+
+            <h3>Vehicle Sales</h3>
+
+            <p>
+              Explore quality vehicles selected for different lifestyles,
+              budgets and driving needs.
+            </p>
+
+            <a href="#vehicles"> Explore Vehicles → </a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number"> 02 </span>
+
+            <h3>Car Sourcing</h3>
+
+            <p>
+              Tell us the vehicle you want and we can help you find a model that
+              matches your requirements.
+            </p>
+
+            <a href="#contact"> Request A Vehicle → </a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number"> 03 </span>
+
+            <h3>Vehicle Inspection</h3>
+
+            <p>
+              Get assistance with checking important vehicle details before
+              making your purchase.
+            </p>
+
+            <a href="#contact"> Request Inspection → </a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number"> 04 </span>
+
+            <h3>Import Assistance</h3>
+
+            <p>
+              Get guidance when sourcing and importing a vehicle for the Kenyan
+              market.
+            </p>
+
+            <a href="#contact"> Start Your Request → </a>
+          </article>
         </div>
       </section>
 
       <section id="about" class="about-section">
         <div class="about-image">
-          <img src="Range Rover.jpg" alt="Luxury vehicle" />
+          <img src="Range Rover.jpg" alt="Luxury Range Rover" />
         </div>
 
         <div class="about-content">
           <p class="section-label">ABOUT CAR KENYA</p>
 
           <h2>
-            Your Journey<br />
-            Starts Here.
+            Your Journey
+            <span>Starts Here.</span>
           </h2>
 
           <p>
             Car Kenya was created with one goal: to make finding and owning your
-            dream vehicle a simple, transparent, and enjoyable experience.
+            dream vehicle a simple, transparent and enjoyable experience.
           </p>
 
           <p>
             Whether you're looking for a performance car, luxury SUV, family
-            vehicle, or a specific imported model, we're here to help you find
+            vehicle or a specific imported model, we're here to help you find
             the right car.
           </p>
 
@@ -340,8 +463,8 @@
           <p class="section-label">GET IN TOUCH</p>
 
           <h2>
-            Let's Find Your<br />
-            Next Vehicle.
+            Let's Find Your
+            <span>Next Vehicle.</span>
           </h2>
 
           <p>
@@ -350,37 +473,37 @@
           </p>
         </div>
 
-        <form id="contact-form" class="contact-form">
+        <form class="contact-form">
           <div class="form-row">
             <div class="form-group">
-              <label for="user-name"> Full Name </label>
+              <label for="name"> Full Name </label>
 
               <input
                 type="text"
-                id="user-name"
+                id="name"
                 name="name"
-                placeholder="John Doe"
+                placeholder="Your full name"
                 required
               />
             </div>
 
             <div class="form-group">
-              <label for="user-email"> Email Address </label>
+              <label for="email"> Email Address </label>
 
               <input
                 type="email"
-                id="user-email"
+                id="email"
                 name="email"
-                placeholder="john@example.com"
+                placeholder="you@example.com"
                 required
               />
             </div>
           </div>
 
           <div class="form-group">
-            <label for="car-inquiry"> What can we help you with? </label>
+            <label for="inquiry"> What can we help you with? </label>
 
-            <select id="car-inquiry" name="inquiry">
+            <select id="inquiry" name="inquiry">
               <option value="vehicle">Buying a Vehicle</option>
 
               <option value="sourcing">Car Sourcing</option>
@@ -394,10 +517,10 @@
           </div>
 
           <div class="form-group">
-            <label for="user-message"> Message </label>
+            <label for="message"> Message </label>
 
             <textarea
-              id="user-message"
+              id="message"
               name="message"
               rows="6"
               placeholder="Tell us what vehicle you're looking for..."
@@ -415,7 +538,7 @@
           <img src="CarKenyaLogo.png" alt="Car Kenya" />
 
           <p>
-            Premium vehicles, trusted sourcing, and professional automotive
+            Premium vehicles, trusted sourcing and professional automotive
             services in Kenya.
           </p>
         </div>
@@ -423,20 +546,27 @@
         <div class="footer-column">
           <h3>Explore</h3>
 
-          <a href="#home">Home</a>
-          <a href="#vehicles">Vehicles</a>
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#home"> Home </a>
+
+          <a href="#vehicles"> Vehicles </a>
+
+          <a href="#services"> Services </a>
+
+          <a href="#about"> About </a>
+
+          <a href="#contact"> Contact </a>
         </div>
 
         <div class="footer-column">
           <h3>Services</h3>
 
-          <a href="#services">Vehicle Sales</a>
-          <a href="#services">Car Sourcing</a>
-          <a href="#services">Vehicle Inspection</a>
-          <a href="#services">Import Assistance</a>
+          <a href="#services"> Vehicle Sales </a>
+
+          <a href="#services"> Car Sourcing </a>
+
+          <a href="#services"> Vehicle Inspection </a>
+
+          <a href="#services"> Import Assistance </a>
         </div>
 
         <div class="footer-column">

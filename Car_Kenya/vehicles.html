@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Explore the Car Kenya vehicle collection. Find quality cars, SUVs, luxury vehicles, and performance cars."
+    />
+
+    <title>Vehicles | Car Kenya</title>
+
+    <link rel="stylesheet" href="Style.css" />
+
+    <style>
+      .vehicles-page {
+        background: #050505;
+        color: #ffffff;
+        min-height: 100vh;
+      }
+
+      .vehicles-hero {
+        min-height: 430px;
+        padding: 150px 7% 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.9)),
+          url("BMW M3.jpg") center/cover no-repeat;
+      }
+
+      .vehicles-hero-content {
+        max-width: 850px;
+      }
+
+      .vehicles-hero .section-label {
+        color: #c9a227;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+      }
+
+      .vehicles-hero h1 {
+        font-size: clamp(2.8rem, 6vw, 5.5rem);
+        line-height: 0.95;
+        margin-bottom: 25px;
+      }
+
+      .vehicles-hero h1 span {
+        color: #c9a227;
+      }
+
+      .vehicles-hero p {
+        max-width: 650px;
+        margin: 0 auto;
+        color: #b5b5b5;
+        line-height: 1.8;
+      }
+
+      .vehicle-filter-section {
+        width: min(1180px, 90%);
+        margin: -55px auto 90px;
+        position: relative;
+        z-index: 5;
+        padding: 30px;
+        background: #111111;
+        border: 1px solid #292929;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      }
+
+      .vehicle-filter-heading {
+        margin-bottom: 25px;
+      }
+
+      .vehicle-filter-heading h2 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+      }
+
+      .vehicle-filter-heading p {
+        color: #8f8f8f;
+        font-size: 0.85rem;
+      }
+
+      .vehicle-filters {
+        display: grid;
+        grid-template-columns:
+          repeat(4, 1fr)
+          auto;
+        gap: 15px;
+      }
+
+      .vehicle-filter {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .vehicle-filter label {
+        color: #999999;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .vehicle-filter select,
+      .vehicle-filter input {
+        width: 100%;
+        padding: 14px;
+        background: #080808;
+        color: #ffffff;
+        border: 1px solid #303030;
+        outline: none;
+        font-family: inherit;
+      }
+
+      .vehicle-filter select:focus,
+      .vehicle-filter input:focus {
+        border-color: #c9a227;
+      }
+
+      .filter-button {
+        align-self: end;
+        padding: 14px 25px;
+        border: none;
+        background: #c9a227;
+        color: #050505;
+        font-weight: 800;
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      .filter-button:hover {
+        background: #e0bd43;
+      }
+
+      .inventory-section {
+        width: min(1280px, 90%);
+        margin: 0 auto 120px;
+      }
+
+      .inventory-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      .inventory-heading h2 {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        margin-bottom: 10px;
+      }
+
+      .inventory-heading p {
+        color: #8f8f8f;
+      }
+
+      .inventory-count {
+        color: #c9a227 !important;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .all-vehicles-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+
+      .all-vehicle-card {
+        overflow: hidden;
+        background: #0d0d0d;
+        border: 1px solid #252525;
+        transition:
+          transform 0.35s ease,
+          border-color 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+
+      .all-vehicle-card:hover {
+        transform: translateY(-8px);
+        border-color: #c9a227;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+      }
+
+      .all-vehicle-image {
+        height: 270px;
+        position: relative;
+        overflow: hidden;
+        background: #111111;
+      }
+
+      .all-vehicle-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .all-vehicle-card:hover .all-vehicle-image img {
+        transform: scale(1.06);
+      }
+
+      .vehicle-status {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        padding: 7px 11px;
+        background: #c9a227;
+        color: #050505;
+        font-size: 0.62rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .all-vehicle-info {
+        padding: 25px;
+      }
+
+      .all-vehicle-category {
+        color: #c9a227;
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+      }
+
+      .all-vehicle-info h3 {
+        font-size: 1.35rem;
+        margin-bottom: 18px;
+      }
+
+      .all-vehicle-specs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 25px;
+      }
+
+      .all-vehicle-specs span {
+        padding-right: 10px;
+        color: #969696;
+        font-size: 0.72rem;
+        border-right: 1px solid #333333;
+      }
+
+      .all-vehicle-specs span:last-child {
+        border-right: none;
+      }
+
+      .all-vehicle-bottom {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 15px;
+        padding-top: 20px;
+        border-top: 1px solid #252525;
+      }
+
+      .all-vehicle-bottom small {
+        display: block;
+        color: #777777;
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+      }
+
+      .all-vehicle-bottom strong {
+        color: #ffffff;
+        font-size: 1.05rem;
+      }
+
+      .vehicle-details-button {
+        padding: 10px 14px;
+        color: #c9a227;
+        border: 1px solid #c9a227;
+        font-size: 0.62rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s ease;
+      }
+
+      .vehicle-details-button:hover {
+        background: #c9a227;
+        color: #050505;
+      }
+
+      .vehicles-cta {
+        margin-top: 100px;
+        padding: 80px 30px;
+        text-align: center;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)),
+          url("Range Rover.jpg") center/cover no-repeat;
+      }
+
+      .vehicles-cta h2 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        margin-bottom: 20px;
+      }
+
+      .vehicles-cta p {
+        max-width: 600px;
+        margin: 0 auto 30px;
+        color: #b5b5b5;
+        line-height: 1.8;
+      }
+
+      .vehicles-cta-button {
+        display: inline-block;
+        padding: 15px 25px;
+        background: #c9a227;
+        color: #050505;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 0.3s ease;
+      }
+
+      .vehicles-cta-button:hover {
+        background: #e0bd43;
+      }
+
+      @media (max-width: 1000px) {
+        .vehicle-filters {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .filter-button {
+          width: 100%;
+        }
+
+        .all-vehicles-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 700px) {
+        .vehicles-hero {
+          min-height: 420px;
+          padding: 120px 20px 70px;
+        }
+
+        .vehicle-filter-section {
+          width: calc(100% - 30px);
+          margin-top: -35px;
+          padding: 20px;
+        }
+
+        .vehicle-filters {
+          grid-template-columns: 1fr;
+        }
+
+        .inventory-section {
+          width: calc(100% - 30px);
+          margin-bottom: 80px;
+        }
+
+        .inventory-heading {
+          align-items: start;
+          flex-direction: column;
+        }
+
+        .all-vehicles-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .all-vehicle-image {
+          height: 240px;
+        }
+
+        .vehicles-cta {
+          margin-top: 60px;
+          padding: 60px 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="vehicles-page">
+    <header class="site-header">
+      <div class="header-container">
+        <a href="carkenya.html" class="logo">
+          <img src="CarKenyaLogo.png" alt="Car Kenya Logo" />
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="carkenya.html#home">Home</a>
+          <a href="vehicles.html" class="active"> Vehicles </a>
+          <a href="carkenya.html#services"> Services </a>
+          <a href="carkenya.html#about"> About </a>
+          <a href="carkenya.html#contact"> Contact </a>
+        </nav>
+
+        <a href="carkenya.html#contact" class="header-button"> Get in Touch </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="vehicles-hero">
+        <div class="vehicles-hero-content">
+          <p class="section-label">CAR KENYA COLLECTION</p>
+
+          <h1>
+            Find Your
+            <span>Next Vehicle.</span>
+          </h1>
+
+          <p>
+            Explore our collection of quality vehicles carefully selected for
+            different lifestyles, preferences, and budgets.
+          </p>
+        </div>
+      </section>
+
+      <section class="vehicle-filter-section">
+        <div class="vehicle-filter-heading">
+          <h2>Find Your Vehicle</h2>
+
+          <p>Search our vehicle collection by make, model, year, or price.</p>
+        </div>
+
+        <form class="vehicle-filters">
+          <div class="vehicle-filter">
+            <label for="vehicle-make"> Make </label>
+
+            <select id="vehicle-make">
+              <option value="">All Makes</option>
+
+              <option>BMW</option>
+              <option>Mercedes-Benz</option>
+              <option>Toyota</option>
+              <option>Audi</option>
+              <option>Range Rover</option>
+              <option>Lexus</option>
+              <option>Porsche</option>
+              <option>Volkswagen</option>
+              <option>Subaru</option>
+              <option>Nissan</option>
+            </select>
+          </div>
+
+          <div class="vehicle-filter">
+            <label for="vehicle-model"> Model </label>
+
+            <select id="vehicle-model">
+              <option value="">All Models</option>
+
+              <option>BMW M3</option>
+              <option>BMW X5</option>
+              <option>Mercedes-Benz C-Class</option>
+              <option>Toyota Land Cruiser</option>
+              <option>Audi Q5</option>
+              <option>Range Rover Sport</option>
+              <option>Lexus RX</option>
+            </select>
+          </div>
+
+          <div class="vehicle-filter">
+            <label for="vehicle-year"> Year </label>
+
+            <select id="vehicle-year">
+              <option value="">Any Year</option>
+
+              <option>2026</option>
+              <option>2025</option>
+              <option>2024</option>
+              <option>2023</option>
+              <option>2022</option>
+              <option>2021</option>
+              <option>2020</option>
+              <option>2019</option>
+            </select>
+          </div>
+
+          <div class="vehicle-filter">
+            <label for="vehicle-price"> Maximum Price </label>
+
+            <select id="vehicle-price">
+              <option value="">Any Price</option>
+
+              <option>KSh 2M</option>
+              <option>KSh 5M</option>
+              <option>KSh 10M</option>
+              <option>KSh 20M</option>
+              <option>KSh 50M</option>
+            </select>
+          </div>
+
+          <button type="submit" class="filter-button">Search</button>
+        </form>
+      </section>
+
+      <section class="inventory-section">
+        <div class="inventory-heading">
+          <div>
+            <p class="section-label">OUR COLLECTION</p>
+
+            <h2>All Vehicles</h2>
+
+            <p>Browse our available vehicle collection.</p>
+          </div>
+
+          <p class="inventory-count">09 Vehicles Available</p>
+        </div>
+
+        <div class="all-vehicles-grid">
+          <article class="all-vehicle-card">
+            <div class="all-vehicle-image">
+              <img src="BMW M3.jpg" alt="Black BMW M3" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="all-vehicle-info">
+              <p class="all-vehicle-category">PERFORMANCE</p>
+
+              <h3>BMW M3</h3>
+
+              <div class="all-vehicle-specs">
+                <span>2023</span>
+                <span>Automatic</span>
+                <span>Petrol</span>
+              </div>
+
+              <div class="all-vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 9,020,000</strong>
+                </div>
+
+                <a href="#" class="vehicle-details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="all-vehicle-card">
+            <div class="all-vehicle-image">
+              <img
+                src="Mercedes Benz C-Class.jpg"
+                alt="Mercedes-Benz C-Class"
+              />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="all-vehicle-info">
+              <p class="all-vehicle-category">LUXURY</p>
+
+              <h3>Mercedes-Benz C-Class</h3>
+
+              <div class="all-vehicle-specs">
+                <span>2019</span>
+                <span>Automatic</span>
+                <span>Petrol</span>
+              </div>
+
+              <div class="all-vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 2,092,000</strong>
+                </div>
+
+                <a href="#" class="vehicle-details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="all-vehicle-card">
+            <div class="all-vehicle-image">
+              <img src="Toyota Land Cruiser.jpg" alt="Toyota Land Cruiser" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="all-vehicle-info">
+              <p class="all-vehicle-category">SUV</p>
+
+              <h3>Toyota Land Cruiser</h3>
+
+              <div class="all-vehicle-specs">
+                <span>2026</span>
+                <span>Automatic</span>
+                <span>Diesel</span>
+              </div>
+
+              <div class="all-vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 11,892,000</strong>
+                </div>
+
+                <a href="#" class="vehicle-details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="all-vehicle-card">
+            <div class="all-vehicle-image">
+              <img src="Range Rover.jpg" alt="Range Rover luxury SUV" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="all-vehicle-info">
+              <p class="all-vehicle-category">LUXURY SUV</p>
+
+              <h3>Range Rover Sport</h3>
+
+              <div class="all-vehicle-specs">
+                <span>2024</span>
+                <span>Automatic</span>
+                <span>Petrol</span>
+              </div>
+
+              <div class="all-vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 14,500,000</strong>
+                </div>
+
+                <a href="#" class="vehicle-details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="all-vehicle-card">
+            <div class="all-vehicle-image">
+              <img src="Audi Q5.jpg" alt="Audi Q5" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="all-vehicle-info">
+              <p class="all-vehicle-category">LUXURY SUV</p>
+
+              <h3>Audi Q5</h3>
+
+              <div class="all-vehicle-specs">
+                <span>2022</span>
+                <span>Automatic</span>
+                <span>Petrol</span>
+              </div>
+
+              <div class="all-vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 6,800,000</strong>
+                </div>
+
+                <a href="#" class="vehicle-details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="all-vehicle-card">
+            <div class="all-vehicle-image">
+              <img src="BMW X5.jpg" alt="BMW X5" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="all-vehicle-info">
+              <p class="all-vehicle-category">SUV</p>
+
+              <h3>BMW X5</h3>
+
+              <div class="all-vehicle-specs">
+                <span>2024</span>
+                <span>Automatic</span>
+                <span>Petrol</span>
+              </div>
+
+              <div class="all-vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 12,500,000</strong>
+                </div>
+
+                <a href="#" class="vehicle-details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="all-vehicle-card">
+            <div class="all-vehicle-image">
+              <img src="Lexus RX.jpg" alt="Lexus RX" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="all-vehicle-info">
+              <p class="all-vehicle-category">PREMIUM SUV</p>
+
+              <h3>Lexus RX</h3>
+
+              <div class="all-vehicle-specs">
+                <span>2023</span>
+                <span>Automatic</span>
+                <span>Hybrid</span>
+              </div>
+
+              <div class="all-vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 8,900,000</strong>
+                </div>
+
+                <a href="#" class="vehicle-details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="all-vehicle-card">
+            <div class="all-vehicle-image">
+              <img src="Porsche Cayenne.jpg" alt="Porsche Cayenne" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="all-vehicle-info">
+              <p class="all-vehicle-category">PERFORMANCE SUV</p>
+
+              <h3>Porsche Cayenne</h3>
+
+              <div class="all-vehicle-specs">
+                <span>2023</span>
+                <span>Automatic</span>
+                <span>Petrol</span>
+              </div>
+
+              <div class="all-vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 15,800,000</strong>
+                </div>
+
+                <a href="#" class="vehicle-details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="all-vehicle-card">
+            <div class="all-vehicle-image">
+              <img src="Subaru Forester.jpg" alt="Subaru Forester" />
+
+              <span class="vehicle-status"> Available </span>
+            </div>
+
+            <div class="all-vehicle-info">
+              <p class="all-vehicle-category">FAMILY SUV</p>
+
+              <h3>Subaru Forester</h3>
+
+              <div class="all-vehicle-specs">
+                <span>2022</span>
+                <span>Automatic</span>
+                <span>Petrol</span>
+              </div>
+
+              <div class="all-vehicle-bottom">
+                <div>
+                  <small>PRICE</small>
+                  <strong>KSh 4,850,000</strong>
+                </div>
+
+                <a href="#" class="vehicle-details-button"> View Details </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="vehicles-cta">
+          <p class="section-label">CAN'T FIND YOUR VEHICLE?</p>
+
+          <h2>
+            We'll Help You<br />
+            Find It.
+          </h2>
+
+          <p>
+            Tell us what you're looking for and our team can help you source the
+            right vehicle for your needs.
+          </p>
+
+          <a href="carkenya.html#contact" class="vehicles-cta-button">
+            Request a Vehicle →
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="CarKenyaLogo.png" alt="Car Kenya" />
+
+          <p>
+            Premium vehicles, trusted sourcing, and professional automotive
+            services in Kenya.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+
+          <a href="carkenya.html#home"> Home </a>
+
+          <a href="vehicles.html"> Vehicles </a>
+
+          <a href="carkenya.html#services"> Services </a>
+
+          <a href="carkenya.html#about"> About </a>
+
+          <a href="carkenya.html#contact"> Contact </a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Services</h3>
+
+          <a href="carkenya.html#services"> Vehicle Sales </a>
+
+          <a href="carkenya.html#services"> Car Sourcing </a>
+
+          <a href="carkenya.html#services"> Vehicle Inspection </a>
+
+          <a href="carkenya.html#services"> Import Assistance </a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+
+          <p>Nairobi, Kenya</p>
+
+          <p>+254 797 979 704</p>
+
+          <p>info@carkenya.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Car Kenya. All rights reserved.</p>
+
+        <p>Built for the road ahead.</p>
+      </div>
+    </footer>
+  </body>
+</html>
