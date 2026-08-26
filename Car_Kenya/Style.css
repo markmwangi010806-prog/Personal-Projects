@@ -1,22 +1,10 @@
-/* ==================================================
-   CAR KENYA
-   GLOBAL STYLES
-================================================== */
+/* =========================================
+   CAR KENYA - MAIN STYLESHEET
+   ========================================= */
 
-:root {
-  --black: #050505;
-  --dark: #0b0b0b;
-  --dark-light: #111111;
-  --gold: #d4af37;
-  --gold-light: #f0d477;
-  --white: #ffffff;
-  --gray: #a6a6a6;
-  --gray-dark: #1c1c1c;
-  --border: rgba(212, 175, 55, 0.25);
-
-  --max-width: 1200px;
-  --transition: 0.3s ease;
-}
+/* =========================================
+   1. GLOBAL SETTINGS
+   ========================================= */
 
 * {
   margin: 0;
@@ -29,24 +17,20 @@ html {
 }
 
 body {
-  background: var(--black);
-  color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
   line-height: 1.6;
 }
 
 img {
-  display: block;
   max-width: 100%;
+  display: block;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-ul {
-  list-style: none;
 }
 
 button,
@@ -56,60 +40,56 @@ textarea {
   font: inherit;
 }
 
-/* ==================================================
-   HEADER
-================================================== */
+/* =========================================
+   2. REUSABLE VARIABLES
+   ========================================= */
+
+:root {
+  --black: #0a0a0a;
+  --dark: #111111;
+  --dark-light: #181818;
+  --gold: #d4af37;
+  --gold-light: #f0d477;
+  --white: #ffffff;
+  --gray: #a7a7a7;
+  --border: #292929;
+}
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-
-  background: rgba(5, 5, 5, 0.95);
-
+  background: rgba(253, 252, 252, 0);
   border-bottom: 1px solid var(--border);
-
-  backdrop-filter: blur(12px);
 }
 
 .header-container {
-  width: min(92%, var(--max-width));
-
+  width: min(1200px, 92%);
+  margin: auto;
   min-height: 80px;
 
-  margin: auto;
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 30px;
 }
 
 .logo img {
   width: 85px;
-
   height: auto;
 }
 
 .main-nav {
   display: flex;
-
   align-items: center;
-
   gap: 30px;
 }
 
 .main-nav a {
   color: #dddddd;
-
   font-size: 14px;
-
   font-weight: 600;
-
-  transition: var(--transition);
+  transition: 0.3s ease;
 }
 
 .main-nav a:hover {
@@ -117,257 +97,173 @@ textarea {
 }
 
 .header-button {
-  padding: 11px 20px;
-
+  padding: 12px 20px;
   border: 1px solid var(--gold);
-
   color: var(--gold);
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  transition: var(--transition);
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .header-button:hover {
   background: var(--gold);
-
-  color: var(--black);
+  color: #000000;
 }
 
-/* ==================================================
-   HERO
-================================================== */
+/* =========================================
+   4. HERO / HOME
+   ========================================= */
 
 .hero {
   position: relative;
-
-  min-height: 760px;
+  min-height: 720px;
 
   display: flex;
-
   align-items: center;
 
-  padding: 120px 4% 180px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+    url("Range Rover.jpg");
 
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.92),
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.75)
-    ),
-    url("Range Rover.jpg") center / cover no-repeat;
-}
-
-.hero-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85));
-
-  z-index: 1;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-content {
   position: relative;
-
   z-index: 2;
 
-  width: min(92%, 1200px);
-
+  width: min(1200px, 92%);
   margin: auto;
+
+  padding-bottom: 160px;
 }
 
 .hero-label,
 .section-label {
   color: var(--gold);
-
   font-size: 12px;
-
-  font-weight: 800;
-
+  font-weight: 700;
   letter-spacing: 3px;
-
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
   max-width: 700px;
 
-  font-size: clamp(48px, 7vw, 90px);
-
-  line-height: 0.98;
-
-  font-weight: 800;
-
-  letter-spacing: -3px;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 0.95;
+  margin-bottom: 30px;
 }
 
-.hero h1 span,
-.about-content h2 span,
-.contact-heading h2 span {
+.hero h1 span {
   color: var(--gold);
 }
 
 .hero-description {
-  max-width: 600px;
-
-  margin-top: 25px;
-
+  max-width: 580px;
   color: #cccccc;
-
-  font-size: 17px;
+  font-size: 18px;
+  margin-bottom: 35px;
 }
 
 .hero-buttons {
   display: flex;
-
-  flex-wrap: wrap;
-
   gap: 15px;
-
-  margin-top: 35px;
+  flex-wrap: wrap;
 }
 
 .btn {
   display: inline-block;
-
   padding: 14px 25px;
-
-  font-size: 13px;
-
-  font-weight: 800;
-
-  letter-spacing: 0.5px;
-
-  transition: var(--transition);
+  font-weight: 700;
+  transition: 0.3s ease;
 }
 
 .btn-primary {
   background: var(--gold);
-
-  color: var(--black);
+  color: #000000;
 }
 
 .btn-primary:hover {
   background: var(--gold-light);
-
   transform: translateY(-2px);
 }
 
 .btn-outline {
   border: 1px solid #ffffff;
-
   color: #ffffff;
 }
 
 .btn-outline:hover {
-  background: #ffffff;
-
-  color: var(--black);
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
-/* ==================================================
-   SEARCH
-================================================== */
+/* =========================================
+   5. VEHICLE SEARCH
+   ========================================= */
 
 .vehicle-search {
   position: absolute;
-
   z-index: 5;
 
+  bottom: -70px;
   left: 50%;
-
-  bottom: 35px;
-
   transform: translateX(-50%);
 
-  width: min(92%, 1150px);
+  width: min(1100px, 90%);
 
-  padding: 22px;
+  padding: 25px;
 
-  background: rgba(10, 10, 10, 0.96);
-
+  background: #151515;
   border: 1px solid var(--border);
 
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .search-heading {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .search-heading p {
   color: var(--gold);
-
   font-size: 12px;
-
-  font-weight: 800;
-
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
 .search-heading span {
-  color: #888;
-
-  font-size: 12px;
+  color: var(--gray);
+  font-size: 13px;
 }
 
 .search-fields {
   display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr)
-    auto;
-
+  grid-template-columns: repeat(4, 1fr) auto;
   gap: 12px;
 }
 
 .search-field {
   display: flex;
-
   flex-direction: column;
-
-  gap: 6px;
+  gap: 7px;
 }
 
 .search-field label {
-  color: #999;
-
-  font-size: 11px;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1px;
+  color: #bbbbbb;
+  font-size: 12px;
 }
 
 .search-field select {
   width: 100%;
+  padding: 13px;
 
-  min-height: 46px;
-
-  padding: 0 12px;
-
-  background: #151515;
-
+  background: #0d0d0d;
   color: #ffffff;
 
-  border: 1px solid #292929;
-
+  border: 1px solid var(--border);
   outline: none;
-
-  cursor: pointer;
 }
 
 .search-field select:focus {
@@ -377,160 +273,132 @@ textarea {
 .search-button {
   align-self: end;
 
-  min-height: 46px;
-
-  padding: 0 25px;
-
-  border: none;
+  padding: 13px 25px;
 
   background: var(--gold);
+  color: #000000;
 
-  color: var(--black);
-
-  font-weight: 800;
-
+  border: none;
   cursor: pointer;
+  font-weight: 700;
 
-  transition: var(--transition);
+  transition: 0.3s ease;
 }
 
 .search-button:hover {
   background: var(--gold-light);
 }
 
-/* ==================================================
-   GENERAL SECTIONS
-================================================== */
+/* =========================================
+   6. GENERAL SECTIONS
+   ========================================= */
 
 .vehicles-section,
 .services-section,
-.why-section,
-.contact-section {
-  width: min(92%, var(--max-width));
-
+.about-section,
+.contact-section,
+.why-section {
+  width: min(1200px, 92%);
   margin: auto;
+  padding: 120px 0;
+}
 
-  padding: 100px 0;
+.vehicles-section {
+  padding-top: 180px;
 }
 
 .section-heading {
   display: flex;
-
-  justify-content: space-between;
-
   align-items: end;
-
+  justify-content: space-between;
   gap: 30px;
 
   margin-bottom: 45px;
 }
 
 .section-heading h2 {
-  font-size: clamp(35px, 5vw, 58px);
-
+  font-size: clamp(32px, 5vw, 52px);
   line-height: 1;
-
-  letter-spacing: -2px;
 }
 
-.section-heading.centered {
+.section-heading > p {
+  color: var(--gray);
+}
+
+.centered {
   display: block;
-
   text-align: center;
-
-  max-width: 700px;
-
-  margin: 0 auto 50px;
 }
 
-.section-heading.centered > p:last-child {
-  margin-top: 15px;
-
+.centered > p:last-child {
+  max-width: 600px;
+  margin: 20px auto 0;
   color: var(--gray);
 }
 
 .view-all {
   color: var(--gold);
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  white-space: nowrap;
+  font-weight: 600;
 }
 
 .view-all:hover {
-  text-decoration: underline;
+  color: var(--gold-light);
 }
 
-/* ==================================================
-   VEHICLES
-================================================== */
+/* =========================================
+   7. VEHICLE CARDS
+   ========================================= */
 
 .vehicle-grid {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 20px;
 }
 
 .vehicle-card {
-  background: var(--dark-light);
-
-  border: 1px solid #202020;
+  background: var(--dark);
+  border: 1px solid var(--border);
 
   overflow: hidden;
 
-  transition: var(--transition);
+  transition: 0.3s ease;
 }
 
 .vehicle-card:hover {
   transform: translateY(-7px);
-
   border-color: var(--gold);
 }
 
 .vehicle-image {
   position: relative;
-
-  aspect-ratio: 4 / 3;
-
+  height: 230px;
   overflow: hidden;
 }
 
 .vehicle-image img {
   width: 100%;
-
   height: 100%;
-
   object-fit: cover;
 
   transition: 0.5s ease;
 }
 
 .vehicle-card:hover .vehicle-image img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 .vehicle-status {
   position: absolute;
+  top: 15px;
+  right: 15px;
 
-  top: 12px;
-
-  right: 12px;
-
-  padding: 5px 10px;
+  padding: 6px 10px;
 
   background: var(--gold);
+  color: #000000;
 
-  color: var(--black);
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .vehicle-info {
@@ -539,38 +407,31 @@ textarea {
 
 .vehicle-category {
   color: var(--gold);
-
-  font-size: 10px;
-
-  font-weight: 800;
-
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
 .vehicle-info h3 {
-  margin: 6px 0 15px;
-
+  margin: 7px 0 15px;
   font-size: 21px;
-
-  line-height: 1.2;
 }
 
 .vehicle-specs {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 8px;
 
-  color: #888;
-
-  font-size: 11px;
+  margin-bottom: 22px;
 }
 
 .vehicle-specs span {
   padding-right: 8px;
 
-  border-right: 1px solid #333;
+  color: var(--gray);
+  font-size: 12px;
+
+  border-right: 1px solid var(--border);
 }
 
 .vehicle-specs span:last-child {
@@ -579,347 +440,257 @@ textarea {
 
 .vehicle-bottom {
   display: flex;
-
   align-items: end;
-
   justify-content: space-between;
-
   gap: 15px;
-
-  margin-top: 20px;
 
   padding-top: 18px;
 
-  border-top: 1px solid #292929;
+  border-top: 1px solid var(--border);
 }
 
 .vehicle-bottom small {
   display: block;
 
-  color: #777;
-
+  color: var(--gray);
   font-size: 9px;
-
   letter-spacing: 1px;
 }
 
 .vehicle-bottom strong {
   display: block;
-
-  margin-top: 3px;
-
   color: var(--gold);
-
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .details-button {
   color: #ffffff;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .details-button:hover {
   color: var(--gold);
 }
 
-/* ==================================================
-   WHY SECTION
-================================================== */
+/* =========================================
+   8. WHY CAR KENYA
+   ========================================= */
 
 .why-section {
   max-width: none;
-
   width: 100%;
-
   padding-left: 4%;
-
   padding-right: 4%;
 
-  background: #090909;
+  background: #111111;
 }
 
 .benefits-grid {
-  width: min(100%, var(--max-width));
-
-  margin: auto;
-
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 20px;
+
+  margin-top: 50px;
 }
 
 .benefit-card {
-  padding: 30px;
+  padding: 35px;
 
-  background: #101010;
+  background: #151515;
+  border: 1px solid var(--border);
 
-  border: 1px solid #202020;
-
-  transition: var(--transition);
+  transition: 0.3s ease;
 }
 
 .benefit-card:hover {
   border-color: var(--gold);
-
   transform: translateY(-5px);
 }
 
-.benefit-number,
-.service-number {
-  display: inline-block;
-
+.benefit-number {
   color: var(--gold);
-
-  font-size: 12px;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .benefit-card h3 {
   margin: 25px 0 12px;
-
-  font-size: 21px;
+  font-size: 20px;
 }
 
 .benefit-card p {
   color: var(--gray);
-
   font-size: 14px;
 }
 
-/* ==================================================
-   SERVICES
-================================================== */
+/* =========================================
+   9. SERVICES
+   ========================================= */
 
 .services-section {
-  max-width: none;
-
-  width: 100%;
-
-  padding-left: 4%;
-
-  padding-right: 4%;
-
   background: var(--black);
 }
 
 .services-grid {
-  width: min(100%, var(--max-width));
-
-  margin: auto;
-
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 20px;
+
+  margin-top: 50px;
 }
 
 .service-card {
-  min-height: 330px;
-
-  padding: 35px 28px;
-
-  background: linear-gradient(145deg, #151515, #080808);
-
-  border: 1px solid #262626;
-
   position: relative;
 
-  transition: var(--transition);
-}
+  padding: 35px;
 
-.service-card::before {
-  content: "";
+  min-height: 300px;
 
-  position: absolute;
+  background: #111111;
+  border: 1px solid var(--border);
 
-  top: 0;
-
-  left: 0;
-
-  width: 0;
-
-  height: 3px;
-
-  background: var(--gold);
-
-  transition: var(--transition);
+  transition: 0.3s ease;
 }
 
 .service-card:hover {
   border-color: var(--gold);
-
-  transform: translateY(-7px);
+  transform: translateY(-6px);
 }
 
-.service-card:hover::before {
-  width: 100%;
+.service-number {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .service-card h3 {
-  margin: 45px 0 15px;
-
-  font-size: 23px;
+  margin: 30px 0 15px;
+  font-size: 22px;
 }
 
 .service-card p {
   color: var(--gray);
-
   font-size: 14px;
+  margin-bottom: 30px;
 }
 
 .service-card a {
-  position: absolute;
-
-  bottom: 28px;
-
   color: var(--gold);
-
-  font-size: 12px;
-
+  font-size: 13px;
   font-weight: 700;
 }
 
-/* ==================================================
-   ABOUT
-================================================== */
+.service-card a:hover {
+  color: var(--gold-light);
+}
+
+/* =========================================
+   10. ABOUT
+   ========================================= */
 
 .about-section {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
+  gap: 70px;
 
-  min-height: 650px;
-
-  background: #0b0b0b;
+  align-items: center;
 }
 
 .about-image {
-  min-height: 500px;
+  height: 550px;
+  overflow: hidden;
 }
 
 .about-image img {
   width: 100%;
-
   height: 100%;
-
   object-fit: cover;
 }
 
-.about-content {
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  padding: 70px 8%;
+.about-content h2 {
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: 1;
+  margin-bottom: 30px;
 }
 
-.about-content h2 {
-  margin-bottom: 25px;
-
-  font-size: clamp(40px, 5vw, 65px);
-
-  line-height: 1;
-
-  letter-spacing: -2px;
+.about-content h2 span {
+  color: var(--gold);
+  display: block;
 }
 
 .about-content p {
-  max-width: 550px;
-
-  margin-bottom: 15px;
-
   color: var(--gray);
-
-  font-size: 15px;
+  margin-bottom: 20px;
 }
 
 .text-button {
-  margin-top: 20px;
+  display: inline-block;
+  margin-top: 15px;
 
   color: var(--gold);
-
-  font-size: 13px;
-
-  font-weight: 800;
+  font-weight: 700;
 }
 
-/* ==================================================
-   CONTACT
-================================================== */
+.text-button:hover {
+  color: var(--gold-light);
+}
+
+/* =========================================
+   11. CONTACT
+   ========================================= */
 
 .contact-section {
   display: grid;
-
   grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
 
-  gap: 80px;
+  background: #111111;
 
-  padding-top: 120px;
-
-  padding-bottom: 120px;
+  max-width: none;
+  width: 100%;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 .contact-heading h2 {
-  margin-bottom: 25px;
-
   font-size: clamp(40px, 5vw, 65px);
-
   line-height: 1;
+  margin-bottom: 25px;
+}
+
+.contact-heading h2 span {
+  display: block;
+  color: var(--gold);
 }
 
 .contact-heading > p:last-child {
-  max-width: 450px;
-
   color: var(--gray);
+  max-width: 450px;
 }
 
 .contact-form {
   display: flex;
-
   flex-direction: column;
-
   gap: 20px;
 }
 
 .form-row {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 20px;
 }
 
 .form-group {
   display: flex;
-
   flex-direction: column;
-
   gap: 8px;
 }
 
 .form-group label {
-  color: #bbbbbb;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1px;
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .form-group input,
@@ -929,12 +700,10 @@ textarea {
 
   padding: 14px;
 
-  background: #111111;
-
+  background: #0a0a0a;
   color: #ffffff;
 
-  border: 1px solid #292929;
-
+  border: 1px solid var(--border);
   outline: none;
 
   resize: vertical;
@@ -947,92 +716,69 @@ textarea {
 }
 
 .submit-button {
-  width: fit-content;
-
-  padding: 14px 30px;
-
-  border: none;
+  padding: 15px 25px;
 
   background: var(--gold);
+  color: #000000;
 
-  color: var(--black);
-
-  font-weight: 800;
-
+  border: none;
   cursor: pointer;
 
-  transition: var(--transition);
+  font-weight: 700;
+
+  transition: 0.3s ease;
 }
 
 .submit-button:hover {
   background: var(--gold-light);
-
-  transform: translateY(-2px);
 }
 
-/* ==================================================
-   FOOTER
-================================================== */
+/* =========================================
+   12. FOOTER
+   ========================================= */
 
 .site-footer {
-  padding: 70px 4% 25px;
+  padding: 70px 5% 25px;
 
   background: #050505;
-
   border-top: 1px solid var(--border);
 }
 
 .footer-grid {
-  width: min(100%, var(--max-width));
-
+  max-width: 1200px;
   margin: auto;
 
   display: grid;
-
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
-
   gap: 50px;
 }
 
 .footer-brand img {
-  width: 100px;
-
+  width: 90px;
   margin-bottom: 20px;
 }
 
-.footer-brand p {
-  max-width: 280px;
-
+.footer-brand p,
+.footer-column p {
   color: var(--gray);
-
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .footer-column {
   display: flex;
-
   flex-direction: column;
-
   gap: 10px;
 }
 
 .footer-column h3 {
   margin-bottom: 10px;
-
   color: var(--gold);
-
-  font-size: 13px;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1px;
+  font-size: 15px;
 }
 
-.footer-column a,
-.footer-column p {
-  color: #999;
-
-  font-size: 13px;
+.footer-column a {
+  color: var(--gray);
+  font-size: 14px;
 }
 
 .footer-column a:hover {
@@ -1040,34 +786,31 @@ textarea {
 }
 
 .footer-bottom {
-  width: min(100%, var(--max-width));
+  max-width: 1200px;
+  margin: 60px auto 0;
 
-  margin: 50px auto 0;
-
-  padding-top: 20px;
-
-  border-top: 1px solid #202020;
+  padding-top: 25px;
 
   display: flex;
-
   justify-content: space-between;
-
   gap: 20px;
 
-  color: #666;
+  border-top: 1px solid var(--border);
 
-  font-size: 11px;
+  color: #777777;
+  font-size: 12px;
 }
 
-/* ==================================================
-   TABLET
-================================================== */
+/* =========================================
+   13. TABLET
+   ========================================= */
 
 @media (max-width: 1000px) {
-  .vehicle-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .main-nav {
+    gap: 15px;
   }
 
+  .vehicle-grid,
   .benefits-grid,
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1081,22 +824,24 @@ textarea {
     width: 100%;
   }
 
+  .about-section,
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* ==================================================
-   MOBILE
-================================================== */
+/* =========================================
+   14. MOBILE
+   ========================================= */
 
 @media (max-width: 700px) {
   .header-container {
-    min-height: 70px;
-
     flex-wrap: wrap;
-
-    padding: 10px 0;
+    padding: 15px 0;
   }
 
   .logo img {
@@ -1109,18 +854,9 @@ textarea {
     width: 100%;
 
     justify-content: center;
+    flex-wrap: wrap;
 
     gap: 15px;
-
-    overflow-x: auto;
-
-    padding-bottom: 5px;
-  }
-
-  .main-nav a {
-    font-size: 12px;
-
-    white-space: nowrap;
   }
 
   .header-button {
@@ -1128,85 +864,64 @@ textarea {
   }
 
   .hero {
-    min-height: 850px;
+    min-height: 750px;
+  }
 
-    padding-top: 100px;
-
-    align-items: flex-start;
+  .hero-content {
+    padding-top: 60px;
+    padding-bottom: 230px;
   }
 
   .hero h1 {
-    font-size: clamp(45px, 14vw, 65px);
-
-    letter-spacing: -2px;
+    font-size: 50px;
   }
 
   .hero-description {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .vehicle-search {
-    bottom: 20px;
-
-    padding: 18px;
-  }
-
-  .search-heading {
-    display: block;
-  }
-
-  .search-heading span {
-    display: block;
-
-    margin-top: 4px;
+    bottom: -180px;
   }
 
   .search-fields {
     grid-template-columns: 1fr;
   }
 
-  .vehicles-section,
-  .services-section,
-  .why-section,
-  .contact-section {
-    padding-top: 70px;
-
-    padding-bottom: 70px;
+  .vehicles-section {
+    padding-top: 260px;
   }
 
   .section-heading {
     display: block;
   }
 
-  .section-heading h2 {
-    margin-bottom: 20px;
+  .view-all {
+    display: inline-block;
+    margin-top: 20px;
   }
 
-  .vehicle-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .vehicle-grid,
   .benefits-grid,
   .services-grid {
     grid-template-columns: 1fr;
   }
 
+  .vehicle-image {
+    height: 250px;
+  }
+
   .about-section {
-    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .about-image {
-    min-height: 350px;
-  }
-
-  .about-content {
-    padding: 60px 6%;
+    height: 350px;
   }
 
   .contact-section {
-    grid-template-columns: 1fr;
-
-    gap: 45px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .form-row {
@@ -1215,15 +930,10 @@ textarea {
 
   .footer-grid {
     grid-template-columns: 1fr;
-
     gap: 35px;
   }
 
   .footer-bottom {
-    display: block;
-  }
-
-  .footer-bottom p + p {
-    margin-top: 8px;
+    flex-direction: column;
   }
 }
