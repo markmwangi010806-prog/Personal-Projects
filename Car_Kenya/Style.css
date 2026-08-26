@@ -1,11 +1,3 @@
-/* =========================================
-   CAR KENYA - MAIN STYLESHEET
-   ========================================= */
-
-/* =========================================
-   1. GLOBAL SETTINGS
-   ========================================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -40,10 +32,6 @@ textarea {
   font: inherit;
 }
 
-/* =========================================
-   2. REUSABLE VARIABLES
-   ========================================= */
-
 :root {
   --black: #0a0a0a;
   --dark: #111111;
@@ -67,7 +55,6 @@ textarea {
   width: min(1200px, 92%);
   margin: auto;
   min-height: 80px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -110,21 +97,14 @@ textarea {
   color: #000000;
 }
 
-/* =========================================
-   4. HERO / HOME
-   ========================================= */
-
 .hero {
   position: relative;
   min-height: 720px;
-
   display: flex;
   align-items: center;
-
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
     url("Range Rover.jpg");
-
   background-size: cover;
   background-position: center;
 }
@@ -132,10 +112,8 @@ textarea {
 .hero-content {
   position: relative;
   z-index: 2;
-
   width: min(1200px, 92%);
   margin: auto;
-
   padding-bottom: 160px;
 }
 
@@ -150,7 +128,6 @@ textarea {
 
 .hero h1 {
   max-width: 700px;
-
   font-size: clamp(48px, 7vw, 88px);
   line-height: 0.95;
   margin-bottom: 30px;
@@ -199,10 +176,6 @@ textarea {
   border-color: var(--gold);
   color: var(--gold);
 }
-
-/* =========================================
-   5. VEHICLE SEARCH
-   ========================================= */
 
 .vehicle-search {
   position: absolute;
@@ -258,10 +231,8 @@ textarea {
 .search-field select {
   width: 100%;
   padding: 13px;
-
   background: #0d0d0d;
   color: #ffffff;
-
   border: 1px solid var(--border);
   outline: none;
 }
@@ -272,26 +243,18 @@ textarea {
 
 .search-button {
   align-self: end;
-
   padding: 13px 25px;
-
   background: var(--gold);
   color: #000000;
-
   border: none;
   cursor: pointer;
   font-weight: 700;
-
   transition: 0.3s ease;
 }
 
 .search-button:hover {
   background: var(--gold-light);
 }
-
-/* =========================================
-   6. GENERAL SECTIONS
-   ========================================= */
 
 .vehicles-section,
 .services-section,
@@ -312,7 +275,6 @@ textarea {
   align-items: end;
   justify-content: space-between;
   gap: 30px;
-
   margin-bottom: 45px;
 }
 
@@ -345,10 +307,6 @@ textarea {
   color: var(--gold-light);
 }
 
-/* =========================================
-   7. VEHICLE CARDS
-   ========================================= */
-
 .vehicle-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -358,9 +316,7 @@ textarea {
 .vehicle-card {
   background: var(--dark);
   border: 1px solid var(--border);
-
   overflow: hidden;
-
   transition: 0.3s ease;
 }
 
@@ -379,7 +335,6 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
   transition: 0.5s ease;
 }
 
@@ -391,12 +346,9 @@ textarea {
   position: absolute;
   top: 15px;
   right: 15px;
-
   padding: 6px 10px;
-
   background: var(--gold);
   color: #000000;
-
   font-size: 11px;
   font-weight: 700;
 }
@@ -421,16 +373,13 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-
   margin-bottom: 22px;
 }
 
 .vehicle-specs span {
   padding-right: 8px;
-
   color: var(--gray);
   font-size: 12px;
-
   border-right: 1px solid var(--border);
 }
 
@@ -443,15 +392,12 @@ textarea {
   align-items: end;
   justify-content: space-between;
   gap: 15px;
-
   padding-top: 18px;
-
   border-top: 1px solid var(--border);
 }
 
 .vehicle-bottom small {
   display: block;
-
   color: var(--gray);
   font-size: 9px;
   letter-spacing: 1px;
@@ -473,16 +419,11 @@ textarea {
   color: var(--gold);
 }
 
-/* =========================================
-   8. WHY CAR KENYA
-   ========================================= */
-
 .why-section {
   max-width: none;
   width: 100%;
   padding-left: 4%;
   padding-right: 4%;
-
   background: #111111;
 }
 
@@ -490,16 +431,13 @@ textarea {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-
   margin-top: 50px;
 }
 
 .benefit-card {
   padding: 35px;
-
   background: #151515;
   border: 1px solid var(--border);
-
   transition: 0.3s ease;
 }
 
@@ -524,10 +462,6 @@ textarea {
   font-size: 14px;
 }
 
-/* =========================================
-   9. SERVICES
-   ========================================= */
-
 .services-section {
   background: var(--black);
 }
@@ -536,20 +470,15 @@ textarea {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-
   margin-top: 50px;
 }
 
 .service-card {
   position: relative;
-
   padding: 35px;
-
   min-height: 300px;
-
   background: #111111;
   border: 1px solid var(--border);
-
   transition: 0.3s ease;
 }
 
@@ -585,15 +514,10 @@ textarea {
   color: var(--gold-light);
 }
 
-/* =========================================
-   10. ABOUT
-   ========================================= */
-
 .about-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 70px;
-
   align-items: center;
 }
 
@@ -627,7 +551,6 @@ textarea {
 .text-button {
   display: inline-block;
   margin-top: 15px;
-
   color: var(--gold);
   font-weight: 700;
 }
@@ -636,17 +559,11 @@ textarea {
   color: var(--gold-light);
 }
 
-/* =========================================
-   11. CONTACT
-   ========================================= */
-
 .contact-section {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: 70px;
-
   background: #111111;
-
   max-width: none;
   width: 100%;
   padding-left: 8%;
@@ -697,15 +614,11 @@ textarea {
 .form-group select,
 .form-group textarea {
   width: 100%;
-
   padding: 14px;
-
   background: #0a0a0a;
   color: #ffffff;
-
   border: 1px solid var(--border);
   outline: none;
-
   resize: vertical;
 }
 
@@ -717,15 +630,11 @@ textarea {
 
 .submit-button {
   padding: 15px 25px;
-
   background: var(--gold);
   color: #000000;
-
   border: none;
   cursor: pointer;
-
   font-weight: 700;
-
   transition: 0.3s ease;
 }
 
@@ -733,13 +642,8 @@ textarea {
   background: var(--gold-light);
 }
 
-/* =========================================
-   12. FOOTER
-   ========================================= */
-
 .site-footer {
   padding: 70px 5% 25px;
-
   background: #050505;
   border-top: 1px solid var(--border);
 }
@@ -747,7 +651,6 @@ textarea {
 .footer-grid {
   max-width: 1200px;
   margin: auto;
-
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 50px;
@@ -788,22 +691,14 @@ textarea {
 .footer-bottom {
   max-width: 1200px;
   margin: 60px auto 0;
-
   padding-top: 25px;
-
   display: flex;
   justify-content: space-between;
   gap: 20px;
-
   border-top: 1px solid var(--border);
-
   color: #777777;
   font-size: 12px;
 }
-
-/* =========================================
-   13. TABLET
-   ========================================= */
 
 @media (max-width: 1000px) {
   .main-nav {
@@ -834,10 +729,6 @@ textarea {
   }
 }
 
-/* =========================================
-   14. MOBILE
-   ========================================= */
-
 @media (max-width: 700px) {
   .header-container {
     flex-wrap: wrap;
@@ -850,12 +741,9 @@ textarea {
 
   .main-nav {
     order: 3;
-
     width: 100%;
-
     justify-content: center;
     flex-wrap: wrap;
-
     gap: 15px;
   }
 
