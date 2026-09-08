@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personalized Webpage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Welcome to Your Personalized Dashboard</h1>
+        <p>Enter your details below to customize your page experience.</p>
+      </header>
+
+      <section class="card">
+        <h2>User Information</h2>
+        <form id="userForm">
+          <div class="form-group">
+            <label for="userName">Name:</label>
+            <input
+              type="text"
+              id="userName"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="userAge">Age (in years):</label>
+            <input
+              type="number"
+              id="userAge"
+              placeholder="Enter your age"
+              min="1"
+              max="120"
+              required
+            />
+          </div>
+
+          <button type="submit" id="submitBtn">Save Details</button>
+          <button type="button" id="clearBtn" class="btn-secondary">
+            Clear Saved Data
+          </button>
+        </form>
+      </section>
+
+      <section id="displaySection" class="card hidden">
+        
+        <div id="greetingContainer" class="info-box"></div>
+
+        <div id="ageMonthsContainer" class="info-box"></div>
+
+        <div id="adultStatusContainer" class="info-box"></div>
+      </section>
+
+      <section id="quoteSection" class="card hidden">
+        <h2>Daily Motivation</h2>
+        <ul id="quoteList"></ul>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
