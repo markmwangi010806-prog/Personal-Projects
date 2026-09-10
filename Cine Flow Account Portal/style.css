@@ -1,0 +1,269 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.dashboard-wrapper {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header  header"
+    "sidebar content";
+  gap: 1rem;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.top-nav {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content-area {
+  grid-area: content;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.5px;
+}
+
+.search-bar {
+  flex-grow: 0.4;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #475569;
+  background-color: #0f172a;
+  color: #f8fafc;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border-color: #38bdf8;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  cursor: pointer;
+  color: #94a3b8;
+}
+
+.user-controls:hover {
+  color: #f8fafc;
+}
+
+.sidebar {
+  background-color: #1e293b;
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem;
+  color: #94a3b8;
+  text-decoration: none;
+  border-radius: 6px;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.nav-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background-color: #334155;
+  color: #38bdf8;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.gallery-container h2,
+.empty-state-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #e2e8f0;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.movie-card {
+  background-color: #1e293b;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  margin: 0.25rem;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+}
+
+.poster-box {
+  height: 160px;
+  background-color: #0f172a;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.movie-card h3 {
+  font-size: 1rem;
+  color: #f8fafc;
+}
+
+.movie-card p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.centered-empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+  background-color: #1e293b;
+  border: 2px dashed #334155;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.empty-state-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 340px;
+}
+
+.empty-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.empty-state-card p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.action-btn {
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #0369a1;
+}
+
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content";
+  }
+
+  .top-nav {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .search-bar {
+    order: 3;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .sidebar-links {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav-item {
+    padding: 0.4rem;
+  }
+}
