@@ -47,7 +47,7 @@ function calculateTotalCalories() {
   return foodItems.reduce((acc, item) => acc + item.calories, 0);
 }
 
-/**
+/** 
  * Display dynamic status/feedback messages to the user.
  * @param {string} msg - Message text.
  * @param {string} colorClass - Tailwind color class (e.g., text-emerald-600).
