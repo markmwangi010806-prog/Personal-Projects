@@ -3,6 +3,7 @@
 A lightweight, responsive web application for logging food items, calculating daily calorie totals, and persisting daily data using browser `localStorage`.
 
 ## Features
+
 - **Add & Manage Foods:** Add food names along with their calorie counts.
 - **Dynamic Totaling:** Automatically recalculates daily calorie consumption in real time.
 - **Data Persistence:** Items persist across browser refreshes via `localStorage`.
@@ -13,6 +14,6 @@ A lightweight, responsive web application for logging food items, calculating da
 ## Project Setup & Usage
 
 1. **Clone the repository:**
-   ```bash
+
    git clone [https://github.com/your-username/calorie-counter.git](https://github.com/your-username/calorie-counter.git)
    cd calorie-counter

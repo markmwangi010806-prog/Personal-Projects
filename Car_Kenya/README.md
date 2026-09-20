@@ -159,7 +159,6 @@ JavaScript is used for:
 
 ## Project Structure
 
-```text
 Car-Kenya/
 │
 ├── index.html
@@ -172,15 +171,14 @@ Car-Kenya/
 ├── README.md
 │
 └── Images/
-    ├── CarKenyaLogo.png
-    ├── BMW M3.jpg
-    ├── BMW X5.jpg
-    ├── Mercedes Benz C-Class.jpg
-    ├── Toyota Land Cruiser.jpg
-    ├── Range Rover.jpg
-    ├── Audi Q5.jpg
-    └── Lexus RX.jpg
-```
+├── CarKenyaLogo.png
+├── BMW M3.jpg
+├── BMW X5.jpg
+├── Mercedes Benz C-Class.jpg
+├── Toyota Land Cruiser.jpg
+├── Range Rover.jpg
+├── Audi Q5.jpg
+└── Lexus RX.jpg
 
 ---
 
@@ -217,9 +215,7 @@ When a user selects a vehicle, the vehicle ID is passed through the URL.
 
 For example:
 
-```text
 vehicle-details.html?id=1
-```
 
 JavaScript reads the ID and displays the corresponding vehicle information.
 
@@ -255,9 +251,7 @@ The website uses a premium automotive design based on:
 
 The primary gold accent used throughout the website is:
 
-```text
 #c9a227
-```
 
 ---
 
