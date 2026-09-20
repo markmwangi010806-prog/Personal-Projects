@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About | Car Kenya</title>
+
+    <meta
+      name="description"
+      content="Learn more about Car Kenya and our approach to vehicle sourcing."
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: "#c9a227",
+              dark: "#080808",
+              charcoal: "#111111",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-dark text-white">
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-black/95 backdrop-blur-md border-b border-white/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- LOGO -->
+          <a href="index.html" aria-label="Car Kenya Home">
+            <img
+              src="Images/CarKenyaLogo.png"
+              alt="Car Kenya Logo"
+              class="w-28 sm:w-32 md:w-40"
+            />
+          </a>
+
+          <!-- DESKTOP NAVIGATION -->
+          <nav
+            class="hidden lg:flex items-center gap-8"
+            aria-label="Main navigation"
+          >
+            <a href="index.html" class="hover:text-gold transition"> Home </a>
+
+            <a href="vehicles.html" class="hover:text-gold transition">
+              Vehicles
+            </a>
+
+            <a href="services.html" class="hover:text-gold transition">
+              Services
+            </a>
+
+            <a href="about.html" class="text-gold"> About </a>
+
+            <a href="contact.html" class="hover:text-gold transition">
+              Contact
+            </a>
+          </nav>
+
+          <!-- DESKTOP BUTTON -->
+          <a
+            href="contact.html"
+            class="hidden lg:inline-flex bg-gold text-black px-5 py-3 font-semibold hover:bg-white transition"
+          >
+            Get In Touch
+          </a>
+
+          <!-- MOBILE MENU BUTTON -->
+          <button
+            id="mobile-menu-button"
+            type="button"
+            class="lg:hidden text-white text-3xl focus:outline-none"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================
+         MOBILE MENU
+    ========================================================== -->
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-[73px] sm:top-[81px] left-0 right-0 z-40 bg-black/95 backdrop-blur-md border-b border-white/10 lg:hidden"
+    >
+      <nav
+        class="flex flex-col px-6 py-6 space-y-5"
+        aria-label="Mobile navigation"
+      >
+        <a href="index.html" class="mobile-nav-link hover:text-gold transition">
+          Home
+        </a>
+
+        <a
+          href="vehicles.html"
+          class="mobile-nav-link hover:text-gold transition"
+        >
+          Vehicles
+        </a>
+
+        <a
+          href="services.html"
+          class="mobile-nav-link hover:text-gold transition"
+        >
+          Services
+        </a>
+
+        <a href="about.html" class="mobile-nav-link text-gold"> About </a>
+
+        <a
+          href="contact.html"
+          class="mobile-nav-link hover:text-gold transition"
+        >
+          Contact
+        </a>
+
+        <a
+          href="contact.html"
+          class="mobile-nav-link bg-gold text-black text-center px-5 py-3 font-semibold hover:bg-white transition"
+        >
+          Get In Touch
+        </a>
+      </nav>
+    </div>
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+    <section class="relative pt-32 sm:pt-40 pb-20 sm:pb-24">
+      <!-- BACKGROUND -->
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url(&quot;Images/Range Rover.jpg&quot;)"
+      ></div>
+
+      <!-- OVERLAY -->
+      <div class="absolute inset-0 bg-black/80"></div>
+
+      <!-- CONTENT -->
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+        <p
+          class="text-gold uppercase tracking-[0.25em] sm:tracking-[0.3em] text-xs sm:text-sm mb-5"
+        >
+          About Car Kenya
+        </p>
+
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
+          Driving Your
+          <span class="text-gold">Next Journey</span>
+        </h1>
+
+        <p class="text-gray-300 max-w-2xl text-base sm:text-lg leading-relaxed">
+          Car Kenya is built around making the vehicle discovery and sourcing
+          experience simpler, clearer and more convenient.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ABOUT
+    ========================================================== -->
+    <section class="py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center"
+        >
+          <!-- TEXT -->
+          <div>
+            <p
+              class="text-gold uppercase tracking-widest text-xs sm:text-sm mb-4"
+            >
+              Who We Are
+            </p>
+
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-7">
+              Your Vehicle.
+              <br />
+              Your Choice.
+            </h2>
+
+            <p class="text-gray-400 leading-relaxed mb-6">
+              Car Kenya is a premium automotive platform focused on helping
+              customers discover and source vehicles for the Kenyan market.
+            </p>
+
+            <p class="text-gray-400 leading-relaxed mb-6">
+              Whether you are looking for a locally available vehicle or
+              considering a foreign-used vehicle, our goal is to provide useful
+              information that makes the buying process easier to understand.
+            </p>
+
+            <p class="text-gray-400 leading-relaxed">
+              From vehicle selection and sourcing to inspection and import
+              assistance, Car Kenya brings different parts of the vehicle
+              journey together in one place.
+            </p>
+          </div>
+
+          <!-- IMAGE -->
+          <div>
+            <img
+              src="Images/Range Rover.jpg"
+              alt="Premium Range Rover"
+              class="w-full h-[320px] sm:h-[450px] lg:h-[550px] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         MISSION & VISION
+    ========================================================== -->
+    <section class="py-16 sm:py-20 bg-charcoal">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
+          <!-- MISSION -->
+          <div
+            class="border border-white/10 p-6 sm:p-10 hover:border-gold transition"
+          >
+            <p
+              class="text-gold text-xs sm:text-sm uppercase tracking-widest mb-4"
+            >
+              Our Mission
+            </p>
+
+            <h2 class="text-2xl sm:text-3xl font-bold mb-5">
+              Simplify Vehicle Discovery
+            </h2>
+
+            <p class="text-gray-400 leading-relaxed">
+              Our mission is to make it easier for customers to discover
+              suitable vehicles and understand the steps involved in purchasing
+              or sourcing them.
+            </p>
+          </div>
+
+          <!-- VISION -->
+          <div
+            class="border border-white/10 p-6 sm:p-10 hover:border-gold transition"
+          >
+            <p
+              class="text-gold text-xs sm:text-sm uppercase tracking-widest mb-4"
+            >
+              Our Vision
+            </p>
+
+            <h2 class="text-2xl sm:text-3xl font-bold mb-5">
+              A Better Automotive Experience
+            </h2>
+
+            <p class="text-gray-400 leading-relaxed">
+              We aim to create a modern automotive experience where customers
+              can explore vehicles, request services and connect with automotive
+              professionals more easily.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         VALUES
+    ========================================================== -->
+    <section class="py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <!-- TITLE -->
+        <div class="text-center mb-10 sm:mb-14">
+          <p
+            class="text-gold uppercase tracking-widest text-xs sm:text-sm mb-3"
+          >
+            Our Values
+          </p>
+
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">
+            What We Stand For
+          </h2>
+        </div>
+
+        <!-- VALUE CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
+          <!-- VALUE 1 -->
+          <div
+            class="bg-charcoal border border-white/10 p-6 sm:p-8 hover:border-gold transition"
+          >
+            <div class="text-gold text-3xl sm:text-4xl mb-6">01</div>
+
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">Transparency</h3>
+
+            <p class="text-gray-400 leading-relaxed">
+              We believe customers should have clear information when evaluating
+              vehicle options.
+            </p>
+          </div>
+
+          <!-- VALUE 2 -->
+          <div
+            class="bg-charcoal border border-white/10 p-6 sm:p-8 hover:border-gold transition"
+          >
+            <div class="text-gold text-3xl sm:text-4xl mb-6">02</div>
+
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">Quality</h3>
+
+            <p class="text-gray-400 leading-relaxed">
+              We focus on presenting vehicle options that match different
+              customer requirements and budgets.
+            </p>
+          </div>
+
+          <!-- VALUE 3 -->
+          <div
+            class="bg-charcoal border border-white/10 p-6 sm:p-8 hover:border-gold transition"
+          >
+            <div class="text-gold text-3xl sm:text-4xl mb-6">03</div>
+
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">Customer Focus</h3>
+
+            <p class="text-gray-400 leading-relaxed">
+              Every vehicle search starts with understanding what the customer
+              actually needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         WHY CAR KENYA
+    ========================================================== -->
+    <section class="py-16 sm:py-20 bg-charcoal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
+          <!-- TITLE -->
+          <div>
+            <p
+              class="text-gold uppercase tracking-widest text-xs sm:text-sm mb-4"
+            >
+              Why Car Kenya
+            </p>
+
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">
+              Built Around
+              <span class="text-gold"> Your Needs </span>
+            </h2>
+          </div>
+
+          <!-- FEATURES -->
+          <div class="space-y-6">
+            <div class="border-b border-white/10 pb-6">
+              <h3 class="text-lg sm:text-xl font-bold mb-2">
+                Wide Vehicle Selection
+              </h3>
+
+              <p class="text-gray-400">
+                Explore different makes, models, years and price ranges.
+              </p>
+            </div>
+
+            <div class="border-b border-white/10 pb-6">
+              <h3 class="text-lg sm:text-xl font-bold mb-2">
+                Vehicle Sourcing
+              </h3>
+
+              <p class="text-gray-400">
+                Request assistance when the vehicle you want is not currently
+                listed.
+              </p>
+            </div>
+
+            <div class="border-b border-white/10 pb-6">
+              <h3 class="text-lg sm:text-xl font-bold mb-2">
+                Automotive Guidance
+              </h3>
+
+              <p class="text-gray-400">
+                Get assistance throughout the vehicle discovery process.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg sm:text-xl font-bold mb-2">Customer First</h3>
+
+              <p class="text-gray-400">
+                We focus on helping customers make informed vehicle choices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CTA
+    ========================================================== -->
+    <section class="py-16 sm:py-20 bg-gold text-black">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+          Let's Find Your Next Vehicle
+        </h2>
+
+        <p class="text-base sm:text-lg mb-8">
+          Explore our collection or contact us about your vehicle requirements.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="vehicles.html"
+            class="bg-black text-white px-8 py-4 font-semibold hover:bg-white hover:text-black transition"
+          >
+            View Vehicles
+          </a>
+
+          <a
+            href="contact.html"
+            class="border-2 border-black px-8 py-4 font-semibold hover:bg-black hover:text-white transition"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+    <footer class="bg-black border-t border-white/10 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+          <!-- BRAND -->
+          <div>
+            <img
+              src="Images/CarKenyaLogo.png"
+              alt="Car Kenya"
+              class="w-28 sm:w-32 mb-5"
+            />
+
+            <p class="text-gray-400">
+              Premium vehicle sourcing and automotive services in Kenya.
+            </p>
+          </div>
+
+          <!-- QUICK LINKS -->
+          <div>
+            <h3 class="font-bold mb-5">Quick Links</h3>
+
+            <div class="space-y-3 text-gray-400">
+              <a href="index.html" class="block hover:text-gold transition">
+                Home
+              </a>
+
+              <a href="vehicles.html" class="block hover:text-gold transition">
+                Vehicles
+              </a>
+
+              <a href="services.html" class="block hover:text-gold transition">
+                Services
+              </a>
+
+              <a href="about.html" class="block hover:text-gold transition">
+                About
+              </a>
+
+              <a href="contact.html" class="block hover:text-gold transition">
+                Contact
+              </a>
+            </div>
+          </div>
+
+          <!-- SERVICES -->
+          <div>
+            <h3 class="font-bold mb-5">Services</h3>
+
+            <div class="space-y-3 text-gray-400">
+              <p>Vehicle Sales</p>
+              <p>Car Sourcing</p>
+              <p>Vehicle Inspection</p>
+              <p>Import Assistance</p>
+            </div>
+          </div>
+
+          <!-- CONTACT -->
+          <div>
+            <h3 class="font-bold mb-5">Contact</h3>
+
+            <div class="space-y-3 text-gray-400">
+              <p>Nairobi, Kenya</p>
+              <p>info@carkenya.co.ke</p>
+              <p>+254 700 000 000</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div
+          class="border-t border-white/10 mt-10 pt-6 text-center text-gray-500 text-sm"
+        >
+          © 2026 Car Kenya. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+         MOBILE NAVIGATION
+    ========================================================== -->
+    <script>
+      function initializeMobileNavigation() {
+        const menuButton = document.getElementById("mobile-menu-button");
+
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+        if (!menuButton || !mobileMenu) {
+          return;
+        }
+
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+
+          const isOpen = !mobileMenu.classList.contains("hidden");
+
+          menuButton.setAttribute("aria-expanded", isOpen);
+
+          menuButton.textContent = isOpen ? "✕" : "☰";
+        });
+
+        mobileLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+
+            menuButton.setAttribute("aria-expanded", "false");
+
+            menuButton.textContent = "☰";
+          });
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeMobileNavigation();
+      });
+    </script>
+  </body>
+</html>

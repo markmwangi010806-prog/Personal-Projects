@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact | Car Kenya</title>
+
+    <meta
+      name="description"
+      content="Contact Car Kenya for vehicle sourcing, sales, inspection and import assistance."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: "#c9a227",
+              dark: "#080808",
+              charcoal: "#111111",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-dark text-white">
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"
+      >
+        <!-- LOGO -->
+
+        <a href="index.html" class="shrink-0">
+          <img
+            src="Images/CarKenyaLogo.png"
+            alt="Car Kenya Logo"
+            class="h-10 sm:h-12 w-auto"
+          />
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+          <a href="index.html" class="hover:text-gold transition"> Home </a>
+
+          <a href="vehicles.html" class="hover:text-gold transition">
+            Vehicles
+          </a>
+
+          <a href="services.html" class="hover:text-gold transition">
+            Services
+          </a>
+
+          <a href="about.html" class="hover:text-gold transition"> About </a>
+
+          <a href="contact.html" class="text-gold"> Contact </a>
+        </nav>
+
+        <!-- DESKTOP BUTTON -->
+
+        <a
+          href="contact.html"
+          class="hidden lg:inline-block bg-gold text-black px-5 xl:px-6 py-3 font-semibold hover:bg-white transition"
+        >
+          Get In Touch
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="lg:hidden text-white text-3xl focus:outline-none"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- MOBILE NAVIGATION -->
+
+      <div
+        id="mobile-menu"
+        class="hidden fixed top-[73px] sm:top-[81px] left-0 right-0 z-40 bg-black/95 backdrop-blur-md border-b border-white/10 lg:hidden"
+      >
+        <nav
+          class="flex flex-col px-5 sm:px-6 py-6 space-y-5"
+          aria-label="Mobile navigation"
+        >
+          <a
+            href="index.html"
+            class="mobile-nav-link hover:text-gold transition"
+          >
+            Home
+          </a>
+
+          <a
+            href="vehicles.html"
+            class="mobile-nav-link hover:text-gold transition"
+          >
+            Vehicles
+          </a>
+
+          <a
+            href="services.html"
+            class="mobile-nav-link hover:text-gold transition"
+          >
+            Services
+          </a>
+
+          <a
+            href="about.html"
+            class="mobile-nav-link hover:text-gold transition"
+          >
+            About
+          </a>
+
+          <a href="contact.html" class="mobile-nav-link text-gold"> Contact </a>
+
+          <a
+            href="contact.html"
+            class="mobile-nav-link bg-gold text-black text-center px-5 py-3 font-semibold hover:bg-white transition"
+          >
+            Get In Touch
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-24 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url(&quot;Images/BMW X5.jpg&quot;)"
+      ></div>
+
+      <div class="absolute inset-0 bg-black/80"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p
+          class="text-gold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-xs sm:text-sm mb-4 sm:mb-5"
+        >
+          Contact Us
+        </p>
+
+        <h1
+          class="text-4xl sm:text-5xl md:text-7xl font-bold mb-5 sm:mb-6 leading-tight"
+        >
+          Let's Talk
+          <span class="text-gold"> Cars </span>
+        </h1>
+
+        <p class="text-gray-300 max-w-2xl text-base sm:text-lg leading-relaxed">
+          Have a vehicle in mind? Need help sourcing a car? Send us your
+          requirements and our team can assist.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACT CONTENT
+    ====================================================== -->
+
+    <section class="py-14 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-12">
+          <!-- =================================================
+               CONTACT INFORMATION
+          ================================================== -->
+
+          <div class="lg:col-span-2">
+            <p
+              class="text-gold uppercase tracking-widest text-xs sm:text-sm mb-4"
+            >
+              Get In Touch
+            </p>
+
+            <h2
+              class="text-3xl sm:text-4xl font-bold mb-5 sm:mb-6 leading-tight"
+            >
+              Start Your
+              <span class="text-gold"> Vehicle Journey </span>
+            </h2>
+
+            <p class="text-gray-400 leading-relaxed mb-8 sm:mb-10">
+              Contact Car Kenya for vehicle sales, sourcing, inspection or
+              import assistance.
+            </p>
+
+            <div class="space-y-6 sm:space-y-7">
+              <!-- LOCATION -->
+
+              <div class="flex gap-4 sm:gap-5 items-start">
+                <div
+                  class="w-11 h-11 sm:w-12 sm:h-12 shrink-0 border border-gold flex items-center justify-center text-gold"
+                >
+                  📍
+                </div>
+
+                <div>
+                  <h3 class="font-bold mb-1">Location</h3>
+
+                  <p class="text-gray-400">Nairobi, Kenya</p>
+                </div>
+              </div>
+
+              <!-- EMAIL -->
+
+              <div class="flex gap-4 sm:gap-5 items-start">
+                <div
+                  class="w-11 h-11 sm:w-12 sm:h-12 shrink-0 border border-gold flex items-center justify-center text-gold"
+                >
+                  ✉
+                </div>
+
+                <div class="min-w-0">
+                  <h3 class="font-bold mb-1">Email</h3>
+
+                  <p class="text-gray-400 break-all">info@carkenya.co.ke</p>
+                </div>
+              </div>
+
+              <!-- PHONE -->
+
+              <div class="flex gap-4 sm:gap-5 items-start">
+                <div
+                  class="w-11 h-11 sm:w-12 sm:h-12 shrink-0 border border-gold flex items-center justify-center text-gold"
+                >
+                  ☎
+                </div>
+
+                <div>
+                  <h3 class="font-bold mb-1">Phone</h3>
+
+                  <p class="text-gray-400">+254 700 000 000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+               FORM
+          ================================================== -->
+
+          <div
+            class="lg:col-span-3 bg-charcoal border border-white/10 p-5 sm:p-8 md:p-10"
+          >
+            <h2 class="text-2xl sm:text-3xl font-bold mb-3">Send An Enquiry</h2>
+
+            <p class="text-gray-400 text-sm sm:text-base mb-7">
+              Fill in the form below and tell us how we can help.
+            </p>
+
+            <!-- SELECTED VEHICLE MESSAGE -->
+
+            <div
+              id="selected-vehicle-box"
+              class="hidden mb-7 sm:mb-8 border border-gold bg-black p-4 sm:p-5"
+            >
+              <p
+                class="text-gold text-xs sm:text-sm uppercase tracking-widest mb-2"
+              >
+                Vehicle Enquiry
+              </p>
+
+              <p
+                id="selected-vehicle-text"
+                class="text-lg sm:text-xl font-bold break-words"
+              ></p>
+            </div>
+
+            <!-- FORM -->
+
+            <form id="contact-form" class="space-y-5 sm:space-y-6">
+              <!-- NAME -->
+
+              <div>
+                <label for="name" class="block text-sm text-gray-400 mb-2">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your full name"
+                  required
+                  class="w-full min-h-[52px] bg-black border border-white/10 px-4 py-3 sm:py-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold transition"
+                />
+              </div>
+
+              <!-- EMAIL -->
+
+              <div>
+                <label for="email" class="block text-sm text-gray-400 mb-2">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                  class="w-full min-h-[52px] bg-black border border-white/10 px-4 py-3 sm:py-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold transition"
+                />
+              </div>
+
+              <!-- PHONE -->
+
+              <div>
+                <label for="phone" class="block text-sm text-gray-400 mb-2">
+                  Phone Number
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+254..."
+                  required
+                  class="w-full min-h-[52px] bg-black border border-white/10 px-4 py-3 sm:py-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold transition"
+                />
+              </div>
+
+              <!-- SERVICE -->
+
+              <div>
+                <label for="service" class="block text-sm text-gray-400 mb-2">
+                  What Do You Need?
+                </label>
+
+                <select
+                  id="service"
+                  name="service"
+                  required
+                  class="w-full min-h-[52px] bg-black border border-white/10 px-4 py-3 sm:py-4 text-white focus:outline-none focus:border-gold transition"
+                >
+                  <option value="">Select a service</option>
+
+                  <option value="vehicle-sales">Vehicle Purchase</option>
+
+                  <option value="car-sourcing">Car Sourcing</option>
+
+                  <option value="inspection">Vehicle Inspection</option>
+
+                  <option value="import">Import Assistance</option>
+
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- VEHICLE -->
+
+              <div>
+                <label for="vehicle" class="block text-sm text-gray-400 mb-2">
+                  Vehicle / Model
+                </label>
+
+                <input
+                  type="text"
+                  id="vehicle"
+                  name="vehicle"
+                  placeholder="e.g. BMW X5 2023"
+                  class="w-full min-h-[52px] bg-black border border-white/10 px-4 py-3 sm:py-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold transition"
+                />
+              </div>
+
+              <!-- MESSAGE -->
+
+              <div>
+                <label for="message" class="block text-sm text-gray-400 mb-2">
+                  Message
+                </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Tell us what you are looking for..."
+                  required
+                  class="w-full bg-black border border-white/10 px-4 py-3 sm:py-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold transition resize-y"
+                ></textarea>
+              </div>
+
+              <!-- SUCCESS MESSAGE -->
+
+              <div
+                id="form-success"
+                class="hidden border border-green-500/40 bg-green-500/10 text-green-400 p-4 text-sm sm:text-base leading-relaxed"
+              >
+                Your enquiry has been submitted successfully. Our team will
+                contact you shortly.
+              </div>
+
+              <!-- BUTTON -->
+
+              <button
+                type="submit"
+                class="w-full min-h-[54px] bg-gold text-black py-4 px-6 font-bold hover:bg-white transition"
+              >
+                Send Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         REQUEST VEHICLE
+    ====================================================== -->
+
+    <section class="py-14 sm:py-20 bg-charcoal">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-gold uppercase tracking-widest text-xs sm:text-sm mb-4">
+          Vehicle Sourcing
+        </p>
+
+        <h2
+          class="text-3xl sm:text-4xl md:text-5xl font-bold mb-5 sm:mb-6 leading-tight"
+        >
+          Looking For Something Specific?
+        </h2>
+
+        <p class="text-gray-400 max-w-2xl mx-auto mb-7 sm:mb-8 leading-relaxed">
+          Send us your preferred make, model, year, budget and specifications
+          and let us know what you are looking for.
+        </p>
+
+        <a
+          href="mailto:info@carkenya.co.ke"
+          class="inline-block w-full sm:w-auto bg-gold text-black px-8 py-4 font-semibold hover:bg-white transition"
+        >
+          Email Car Kenya
+        </a>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="bg-black border-t border-white/10 py-10 sm:py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10"
+        >
+          <!-- BRAND -->
+
+          <div>
+            <img
+              src="Images/CarKenyaLogo.png"
+              alt="Car Kenya"
+              class="h-10 sm:h-12 mb-5"
+            />
+
+            <p class="text-gray-400 leading-relaxed">
+              Premium vehicle sourcing and automotive services in Kenya.
+            </p>
+          </div>
+
+          <!-- QUICK LINKS -->
+
+          <div>
+            <h3 class="font-bold mb-5">Quick Links</h3>
+
+            <div class="space-y-3 text-gray-400">
+              <a href="index.html" class="block hover:text-gold transition">
+                Home
+              </a>
+
+              <a href="vehicles.html" class="block hover:text-gold transition">
+                Vehicles
+              </a>
+
+              <a href="services.html" class="block hover:text-gold transition">
+                Services
+              </a>
+
+              <a href="about.html" class="block hover:text-gold transition">
+                About
+              </a>
+
+              <a href="contact.html" class="block hover:text-gold transition">
+                Contact
+              </a>
+            </div>
+          </div>
+
+          <!-- SERVICES -->
+
+          <div>
+            <h3 class="font-bold mb-5">Services</h3>
+
+            <div class="space-y-3 text-gray-400">
+              <p>Vehicle Sales</p>
+
+              <p>Car Sourcing</p>
+
+              <p>Vehicle Inspection</p>
+
+              <p>Import Assistance</p>
+            </div>
+          </div>
+
+          <!-- CONTACT -->
+
+          <div>
+            <h3 class="font-bold mb-5">Contact</h3>
+
+            <div class="space-y-3 text-gray-400">
+              <p>Nairobi, Kenya</p>
+
+              <p class="break-all">info@carkenya.co.ke</p>
+
+              <p>+254 700 000 000</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/10 mt-10 pt-6 text-center text-gray-500 text-sm"
+        >
+          © 2026 Car Kenya. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+         CONTACT PAGE JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // ================================================
+        // MOBILE NAVIGATION
+        // ================================================
+
+        const menuButton = document.getElementById("mobile-menu-button");
+
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+        if (menuButton && mobileMenu) {
+          menuButton.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+
+            const isOpen = !mobileMenu.classList.contains("hidden");
+
+            menuButton.setAttribute("aria-expanded", isOpen);
+
+            menuButton.setAttribute(
+              "aria-label",
+              isOpen ? "Close navigation menu" : "Open navigation menu",
+            );
+
+            menuButton.textContent = isOpen ? "✕" : "☰";
+          });
+
+          mobileLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              mobileMenu.classList.add("hidden");
+
+              menuButton.setAttribute("aria-expanded", "false");
+
+              menuButton.setAttribute("aria-label", "Open navigation menu");
+
+              menuButton.textContent = "☰";
+            });
+          });
+        }
+
+        // ================================================
+        // GET VEHICLE FROM URL
+        // ================================================
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const vehicle = urlParams.get("vehicle");
+
+        const vehicleInput = document.getElementById("vehicle");
+
+        const selectedVehicleBox = document.getElementById(
+          "selected-vehicle-box",
+        );
+
+        const selectedVehicleText = document.getElementById(
+          "selected-vehicle-text",
+        );
+
+        // ================================================
+        // DISPLAY SELECTED VEHICLE
+        // ================================================
+
+        if (vehicle) {
+          const decodedVehicle = decodeURIComponent(vehicle);
+
+          if (vehicleInput) {
+            vehicleInput.value = decodedVehicle;
+
+            vehicleInput.readOnly = true;
+
+            vehicleInput.classList.add("border-gold", "text-gold");
+          }
+
+          if (selectedVehicleBox && selectedVehicleText) {
+            selectedVehicleText.textContent = decodedVehicle;
+
+            selectedVehicleBox.classList.remove("hidden");
+          }
+        }
+
+        // ================================================
+        // CONTACT FORM
+        // ================================================
+
+        const contactForm = document.getElementById("contact-form");
+
+        const successMessage = document.getElementById("form-success");
+
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Browser validation
+
+            if (!contactForm.checkValidity()) {
+              contactForm.reportValidity();
+
+              return;
+            }
+
+            // Show success message
+
+            if (successMessage) {
+              successMessage.classList.remove("hidden");
+            }
+
+            // Change button text
+
+            const submitButton = contactForm.querySelector(
+              'button[type="submit"]',
+            );
+
+            if (submitButton) {
+              submitButton.textContent = "Enquiry Sent ✓";
+
+              submitButton.disabled = true;
+
+              submitButton.classList.add("opacity-70", "cursor-not-allowed");
+            }
+
+            // Clear form fields
+
+            document.getElementById("name").value = "";
+
+            document.getElementById("email").value = "";
+
+            document.getElementById("phone").value = "";
+
+            document.getElementById("service").value = "";
+
+            document.getElementById("message").value = "";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
