@@ -30,18 +30,12 @@
   </head>
 
   <body class="bg-dark text-white">
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
-
     <header
       class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10"
     >
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between"
       >
-        <!-- LOGO -->
-
         <a href="index.html" class="shrink-0">
           <img
             src="Images/CarKenyaLogo.png"
@@ -49,8 +43,6 @@
             class="h-10 sm:h-12 w-auto"
           />
         </a>
-
-        <!-- DESKTOP NAVIGATION -->
 
         <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
           <a href="index.html" class="hover:text-gold transition"> Home </a>
@@ -68,16 +60,12 @@
           <a href="contact.html" class="text-gold"> Contact </a>
         </nav>
 
-        <!-- DESKTOP BUTTON -->
-
         <a
           href="contact.html"
           class="hidden lg:inline-block bg-gold text-black px-5 xl:px-6 py-3 font-semibold hover:bg-white transition"
         >
           Get In Touch
         </a>
-
-        <!-- MOBILE MENU BUTTON -->
 
         <button
           id="mobile-menu-button"
@@ -89,8 +77,6 @@
           ☰
         </button>
       </div>
-
-      <!-- MOBILE NAVIGATION -->
 
       <div
         id="mobile-menu"
@@ -140,14 +126,11 @@
       </div>
     </header>
 
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
-
     <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-24 overflow-hidden">
       <div
-        class="absolute inset-0 bg-cover bg-center"
-        style="background-image: url(&quot;Images/BMW X5.jpg&quot;)"
+        id="home"
+        class="relative min-h-screen flex items-center bg-cover bg-center"
+        style="background-image: url(&quot;Images/Range Rover.jpg&quot;)"
       ></div>
 
       <div class="absolute inset-0 bg-black/80"></div>
@@ -173,17 +156,9 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         CONTACT CONTENT
-    ====================================================== -->
-
     <section class="py-14 sm:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-12">
-          <!-- =================================================
-               CONTACT INFORMATION
-          ================================================== -->
-
           <div class="lg:col-span-2">
             <p
               class="text-gold uppercase tracking-widest text-xs sm:text-sm mb-4"
@@ -204,8 +179,6 @@
             </p>
 
             <div class="space-y-6 sm:space-y-7">
-              <!-- LOCATION -->
-
               <div class="flex gap-4 sm:gap-5 items-start">
                 <div
                   class="w-11 h-11 sm:w-12 sm:h-12 shrink-0 border border-gold flex items-center justify-center text-gold"
@@ -220,8 +193,6 @@
                 </div>
               </div>
 
-              <!-- EMAIL -->
-
               <div class="flex gap-4 sm:gap-5 items-start">
                 <div
                   class="w-11 h-11 sm:w-12 sm:h-12 shrink-0 border border-gold flex items-center justify-center text-gold"
@@ -235,8 +206,6 @@
                   <p class="text-gray-400 break-all">info@carkenya.co.ke</p>
                 </div>
               </div>
-
-              <!-- PHONE -->
 
               <div class="flex gap-4 sm:gap-5 items-start">
                 <div
@@ -254,10 +223,6 @@
             </div>
           </div>
 
-          <!-- =================================================
-               FORM
-          ================================================== -->
-
           <div
             class="lg:col-span-3 bg-charcoal border border-white/10 p-5 sm:p-8 md:p-10"
           >
@@ -266,8 +231,6 @@
             <p class="text-gray-400 text-sm sm:text-base mb-7">
               Fill in the form below and tell us how we can help.
             </p>
-
-            <!-- SELECTED VEHICLE MESSAGE -->
 
             <div
               id="selected-vehicle-box"
@@ -285,11 +248,7 @@
               ></p>
             </div>
 
-            <!-- FORM -->
-
             <form id="contact-form" class="space-y-5 sm:space-y-6">
-              <!-- NAME -->
-
               <div>
                 <label for="name" class="block text-sm text-gray-400 mb-2">
                   Full Name
@@ -304,8 +263,6 @@
                   class="w-full min-h-[52px] bg-black border border-white/10 px-4 py-3 sm:py-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold transition"
                 />
               </div>
-
-              <!-- EMAIL -->
 
               <div>
                 <label for="email" class="block text-sm text-gray-400 mb-2">
@@ -322,8 +279,6 @@
                 />
               </div>
 
-              <!-- PHONE -->
-
               <div>
                 <label for="phone" class="block text-sm text-gray-400 mb-2">
                   Phone Number
@@ -338,8 +293,6 @@
                   class="w-full min-h-[52px] bg-black border border-white/10 px-4 py-3 sm:py-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold transition"
                 />
               </div>
-
-              <!-- SERVICE -->
 
               <div>
                 <label for="service" class="block text-sm text-gray-400 mb-2">
@@ -366,8 +319,6 @@
                 </select>
               </div>
 
-              <!-- VEHICLE -->
-
               <div>
                 <label for="vehicle" class="block text-sm text-gray-400 mb-2">
                   Vehicle / Model
@@ -381,8 +332,6 @@
                   class="w-full min-h-[52px] bg-black border border-white/10 px-4 py-3 sm:py-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold transition"
                 />
               </div>
-
-              <!-- MESSAGE -->
 
               <div>
                 <label for="message" class="block text-sm text-gray-400 mb-2">
@@ -399,8 +348,6 @@
                 ></textarea>
               </div>
 
-              <!-- SUCCESS MESSAGE -->
-
               <div
                 id="form-success"
                 class="hidden border border-green-500/40 bg-green-500/10 text-green-400 p-4 text-sm sm:text-base leading-relaxed"
@@ -408,8 +355,6 @@
                 Your enquiry has been submitted successfully. Our team will
                 contact you shortly.
               </div>
-
-              <!-- BUTTON -->
 
               <button
                 type="submit"
@@ -422,10 +367,6 @@
         </div>
       </div>
     </section>
-
-    <!-- =====================================================
-         REQUEST VEHICLE
-    ====================================================== -->
 
     <section class="py-14 sm:py-20 bg-charcoal">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -453,17 +394,11 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
     <footer class="bg-black border-t border-white/10 py-10 sm:py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10"
         >
-          <!-- BRAND -->
-
           <div>
             <img
               src="Images/CarKenyaLogo.png"
@@ -475,8 +410,6 @@
               Premium vehicle sourcing and automotive services in Kenya.
             </p>
           </div>
-
-          <!-- QUICK LINKS -->
 
           <div>
             <h3 class="font-bold mb-5">Quick Links</h3>
@@ -504,8 +437,6 @@
             </div>
           </div>
 
-          <!-- SERVICES -->
-
           <div>
             <h3 class="font-bold mb-5">Services</h3>
 
@@ -519,8 +450,6 @@
               <p>Import Assistance</p>
             </div>
           </div>
-
-          <!-- CONTACT -->
 
           <div>
             <h3 class="font-bold mb-5">Contact</h3>
@@ -543,18 +472,10 @@
       </div>
     </footer>
 
-    <!-- =====================================================
-         CONTACT PAGE JAVASCRIPT
-    ====================================================== -->
-
     <script src="script.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // ================================================
-        // MOBILE NAVIGATION
-        // ================================================
-
         const menuButton = document.getElementById("mobile-menu-button");
 
         const mobileMenu = document.getElementById("mobile-menu");
@@ -590,10 +511,6 @@
           });
         }
 
-        // ================================================
-        // GET VEHICLE FROM URL
-        // ================================================
-
         const urlParams = new URLSearchParams(window.location.search);
 
         const vehicle = urlParams.get("vehicle");
@@ -607,10 +524,6 @@
         const selectedVehicleText = document.getElementById(
           "selected-vehicle-text",
         );
-
-        // ================================================
-        // DISPLAY SELECTED VEHICLE
-        // ================================================
 
         if (vehicle) {
           const decodedVehicle = decodeURIComponent(vehicle);
@@ -630,10 +543,6 @@
           }
         }
 
-        // ================================================
-        // CONTACT FORM
-        // ================================================
-
         const contactForm = document.getElementById("contact-form");
 
         const successMessage = document.getElementById("form-success");
@@ -642,21 +551,15 @@
           contactForm.addEventListener("submit", function (event) {
             event.preventDefault();
 
-            // Browser validation
-
             if (!contactForm.checkValidity()) {
               contactForm.reportValidity();
 
               return;
             }
 
-            // Show success message
-
             if (successMessage) {
               successMessage.classList.remove("hidden");
             }
-
-            // Change button text
 
             const submitButton = contactForm.querySelector(
               'button[type="submit"]',
@@ -669,8 +572,6 @@
 
               submitButton.classList.add("opacity-70", "cursor-not-allowed");
             }
-
-            // Clear form fields
 
             document.getElementById("name").value = "";
 

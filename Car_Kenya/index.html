@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
@@ -11,7 +12,6 @@
 
     <title>Car Kenya | Find Your Dream Vehicle</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -22,6 +22,7 @@
               gold: "#c9a227",
               dark: "#080808",
               charcoal: "#111111",
+              panel: "#151515",
             },
           },
         },
@@ -29,18 +30,13 @@
     </script>
   </head>
 
-  <body class="bg-black text-white font-sans">
-    <!-- ========================================================= -->
-    <!-- HEADER -->
-    <!-- ========================================================= -->
-
+  <body class="bg-dark text-white font-sans">
     <header
-      class="absolute top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-md border-b border-white/10"
+      class="absolute top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10"
     >
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-24 flex items-center justify-between"
       >
-        <!-- LOGO -->
         <a href="index.html" class="flex items-center">
           <img
             src="Images/CarKenyaLogo.png"
@@ -49,7 +45,6 @@
           />
         </a>
 
-        <!-- DESKTOP NAVIGATION -->
         <nav
           class="hidden lg:flex items-center gap-10"
           aria-label="Main navigation"
@@ -63,34 +58,33 @@
 
           <a
             href="vehicles.html"
-            class="text-sm uppercase tracking-wider text-white hover:text-gold transition duration-300"
+            class="text-sm uppercase tracking-wider text-gray-300 hover:text-gold transition duration-300"
           >
             Vehicles
           </a>
 
           <a
             href="services.html"
-            class="text-sm uppercase tracking-wider text-white hover:text-gold transition duration-300"
+            class="text-sm uppercase tracking-wider text-gray-300 hover:text-gold transition duration-300"
           >
             Services
           </a>
 
           <a
             href="about.html"
-            class="text-sm uppercase tracking-wider text-white hover:text-gold transition duration-300"
+            class="text-sm uppercase tracking-wider text-gray-300 hover:text-gold transition duration-300"
           >
             About
           </a>
 
           <a
             href="contact.html"
-            class="text-sm uppercase tracking-wider text-white hover:text-gold transition duration-300"
+            class="text-sm uppercase tracking-wider text-gray-300 hover:text-gold transition duration-300"
           >
             Contact
           </a>
         </nav>
 
-        <!-- DESKTOP CONTACT BUTTON -->
         <a
           href="contact.html"
           class="hidden lg:inline-flex border border-gold text-gold px-6 py-3 text-sm uppercase tracking-wider hover:bg-gold hover:text-black transition duration-300"
@@ -98,7 +92,6 @@
           Get In Touch
         </a>
 
-        <!-- MOBILE MENU BUTTON -->
         <button
           id="mobile-menu-button"
           type="button"
@@ -110,10 +103,6 @@
         </button>
       </div>
     </header>
-
-    <!-- ========================================================= -->
-    <!-- MOBILE NAVIGATION -->
-    <!-- ========================================================= -->
 
     <div
       id="mobile-menu"
@@ -132,28 +121,28 @@
 
         <a
           href="vehicles.html"
-          class="mobile-nav-link text-sm uppercase tracking-wider text-white hover:text-gold transition"
+          class="mobile-nav-link text-sm uppercase tracking-wider text-gray-300 hover:text-gold transition"
         >
           Vehicles
         </a>
 
         <a
           href="services.html"
-          class="mobile-nav-link text-sm uppercase tracking-wider text-white hover:text-gold transition"
+          class="mobile-nav-link text-sm uppercase tracking-wider text-gray-300 hover:text-gold transition"
         >
           Services
         </a>
 
         <a
           href="about.html"
-          class="mobile-nav-link text-sm uppercase tracking-wider text-white hover:text-gold transition"
+          class="mobile-nav-link text-sm uppercase tracking-wider text-gray-300 hover:text-gold transition"
         >
           About
         </a>
 
         <a
           href="contact.html"
-          class="mobile-nav-link text-sm uppercase tracking-wider text-white hover:text-gold transition"
+          class="mobile-nav-link text-sm uppercase tracking-wider text-gray-300 hover:text-gold transition"
         >
           Contact
         </a>
@@ -167,20 +156,14 @@
       </nav>
     </div>
 
-    <!-- ========================================================= -->
-    <!-- HERO -->
-    <!-- ========================================================= -->
-
     <main>
       <section
         id="home"
-        class="relative min-h-screen flex items-center bg-cover bg-center"
+        class="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
         style="background-image: url(&quot;Images/Range Rover.jpg&quot;)"
       >
-        <!-- OVERLAY -->
         <div class="absolute inset-0 bg-black/75"></div>
 
-        <!-- HERO CONTENT -->
         <div
           class="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10 pt-40 pb-80 sm:pb-72"
         >
@@ -224,14 +207,12 @@
           </div>
         </div>
 
-        <!-- ===================================================== -->
-        <!-- SEARCH BOX -->
-        <!-- ===================================================== -->
-
         <div
           class="absolute bottom-0 left-0 right-0 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 translate-y-1/2"
         >
-          <div class="bg-white text-black p-5 sm:p-6 md:p-8 shadow-2xl">
+          <div
+            class="bg-[#111111] text-white p-5 sm:p-6 md:p-8 shadow-2xl border border-white/10"
+          >
             <div class="mb-6">
               <p
                 class="text-xs font-bold tracking-[0.25em] text-gold uppercase"
@@ -248,125 +229,120 @@
               method="GET"
               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5"
             >
-              <!-- MAKE -->
-
               <div>
                 <label
-                  for="make"
-                  class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2"
+                  for="search-make"
+                  class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
                 >
                   Make
                 </label>
 
                 <select
-                  id="make"
+                  id="search-make"
                   name="make"
-                  class="w-full border border-gray-300 bg-white px-4 py-3 outline-none focus:border-gold"
+                  class="w-full border border-white/10 bg-[#181818] text-white px-4 py-3 outline-none focus:border-gold"
                 >
-                  <option value="">All Makes</option>
-                  <option value="BMW">BMW</option>
-                  <option value="Mercedes">Mercedes-Benz</option>
-                  <option value="Toyota">Toyota</option>
-                  <option value="Audi">Audi</option>
-                  <option value="Range Rover">Range Rover</option>
-                  <option value="Lexus">Lexus</option>
+                  <option value="" class="bg-[#181818]">All Makes</option>
+
+                  <option value="BMW" class="bg-[#181818]">BMW</option>
+
+                  <option value="Mercedes" class="bg-[#181818]">
+                    Mercedes-Benz
+                  </option>
+
+                  <option value="Toyota" class="bg-[#181818]">Toyota</option>
+
+                  <option value="Range Rover" class="bg-[#181818]">
+                    Range Rover
+                  </option>
+
+                  <option value="Audi" class="bg-[#181818]">Audi</option>
+
+                  <option value="Lexus" class="bg-[#181818]">Lexus</option>
                 </select>
               </div>
 
-              <!-- MODEL -->
-
               <div>
                 <label
-                  for="model"
-                  class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2"
+                  for="search-model"
+                  class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
                 >
                   Model
                 </label>
 
                 <select
-                  id="model"
+                  id="search-model"
                   name="model"
-                  class="w-full border border-gray-300 bg-white px-4 py-3 outline-none focus:border-gold"
+                  class="w-full border border-white/10 bg-[#181818] text-white px-4 py-3 outline-none focus:border-gold"
                 >
-                  <option value="">All Models</option>
-
-                  <option value="bmw-m3">BMW M3</option>
-
-                  <option value="bmw-x5">BMW X5</option>
-
-                  <option value="mercedes-c-class">
-                    Mercedes-Benz C-Class
-                  </option>
-
-                  <option value="land-cruiser">Toyota Land Cruiser</option>
-
-                  <option value="audi-q5">Audi Q5</option>
-
-                  <option value="range-rover-sport">Range Rover Sport</option>
-
-                  <option value="lexus-rx">Lexus RX</option>
+                  <option value="" class="bg-[#181818]">All Models</option>
                 </select>
               </div>
 
-              <!-- YEAR -->
-
               <div>
                 <label
-                  for="year"
-                  class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2"
+                  for="search-year"
+                  class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
                 >
                   Year
                 </label>
 
                 <select
-                  id="year"
+                  id="search-year"
                   name="year"
-                  class="w-full border border-gray-300 bg-white px-4 py-3 outline-none focus:border-gold"
+                  class="w-full border border-white/10 bg-[#181818] text-white px-4 py-3 outline-none focus:border-gold"
                 >
-                  <option value="">Any Year</option>
+                  <option value="" class="bg-[#181818]">Any Year</option>
 
-                  <option value="2026">2026</option>
-                  <option value="2025">2025</option>
-                  <option value="2024">2024</option>
-                  <option value="2023">2023</option>
-                  <option value="2022">2022</option>
-                  <option value="2021">2021</option>
-                  <option value="2020">2020</option>
-                  <option value="2019">2019</option>
+                  <option value="2026" class="bg-[#181818]">2026</option>
+
+                  <option value="2025" class="bg-[#181818]">2025</option>
+
+                  <option value="2024" class="bg-[#181818]">2024</option>
+
+                  <option value="2023" class="bg-[#181818]">2023</option>
+
+                  <option value="2022" class="bg-[#181818]">2022</option>
+
+                  <option value="2021" class="bg-[#181818]">2021</option>
+
+                  <option value="2020" class="bg-[#181818]">2020</option>
+
+                  <option value="2019" class="bg-[#181818]">2019</option>
                 </select>
               </div>
 
-              <!-- PRICE -->
-
               <div>
                 <label
-                  for="price"
-                  class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2"
+                  for="search-price"
+                  class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2"
                 >
                   Maximum Price
                 </label>
 
                 <select
-                  id="price"
+                  id="search-price"
                   name="price"
-                  class="w-full border border-gray-300 bg-white px-4 py-3 outline-none focus:border-gold"
+                  class="w-full border border-white/10 bg-[#181818] text-white px-4 py-3 outline-none focus:border-gold"
                 >
-                  <option value="">Any Price</option>
+                  <option value="" class="bg-[#181818]">Any Price</option>
 
-                  <option value="2000000">KSh 2M</option>
-                  <option value="5000000">KSh 5M</option>
-                  <option value="10000000">KSh 10M</option>
-                  <option value="20000000">KSh 20M</option>
-                  <option value="50000000">KSh 50M</option>
+                  <option value="2000000" class="bg-[#181818]">KSh 2M</option>
+
+                  <option value="5000000" class="bg-[#181818]">KSh 5M</option>
+
+                  <option value="10000000" class="bg-[#181818]">KSh 10M</option>
+
+                  <option value="20000000" class="bg-[#181818]">KSh 20M</option>
+
+                  <option value="50000000" class="bg-[#181818]">KSh 50M</option>
                 </select>
               </div>
-
-              <!-- SEARCH BUTTON -->
 
               <div class="flex items-end">
                 <button
                   type="submit"
-                  class="w-full bg-black text-white px-6 py-3.5 font-semibold uppercase tracking-wider hover:bg-gold hover:text-black transition duration-300"
+                  class="w-full bg-gold text-black px-6 py-3.5 font-semibold uppercase tracking-wider hover:bg-white transition duration-300"
                 >
                   Search
                 </button>
@@ -376,13 +352,9 @@
         </div>
       </section>
 
-      <!-- ========================================================= -->
-      <!-- FEATURED VEHICLES -->
-      <!-- ========================================================= -->
-
       <section
         id="vehicles"
-        class="bg-white text-black pt-48 pb-24 px-4 sm:px-6 lg:px-10"
+        class="bg-dark text-white pt-48 pb-24 px-4 sm:px-6 lg:px-10"
       >
         <div class="max-w-7xl mx-auto">
           <div
@@ -396,6 +368,10 @@
               </p>
 
               <h2 class="text-4xl md:text-5xl font-bold">Featured Vehicles</h2>
+
+              <p id="home-result-count" class="text-gray-500 mt-3">
+                Loading vehicles...
+              </p>
             </div>
 
             <a
@@ -406,235 +382,18 @@
             </a>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- BMW M3 -->
+          <!-- VEHICLES GENERATED BY JAVASCRIPT -->
 
-            <article
-              class="group bg-gray-100 overflow-hidden border border-gray-200 hover:shadow-2xl transition duration-500"
-            >
-              <div class="relative h-64 overflow-hidden">
-                <img
-                  src="Images/BMW M3.jpg"
-                  alt="Black BMW M3"
-                  class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-                />
-
-                <span
-                  class="absolute top-4 left-4 bg-gold text-black px-3 py-1 text-xs font-bold uppercase"
-                >
-                  Available
-                </span>
-              </div>
-
-              <div class="p-6">
-                <p class="text-gold text-xs font-bold tracking-wider uppercase">
-                  Performance
-                </p>
-
-                <h3 class="text-2xl font-bold mt-2">BMW M3</h3>
-
-                <div class="flex flex-wrap gap-3 text-sm text-gray-500 mt-4">
-                  <span>2023</span>
-                  <span>•</span>
-                  <span>Automatic</span>
-                  <span>•</span>
-                  <span>Petrol</span>
-                </div>
-
-                <div
-                  class="border-t border-gray-200 mt-6 pt-5 flex items-end justify-between gap-4"
-                >
-                  <div>
-                    <small class="block text-xs text-gray-500 tracking-wider">
-                      PRICE
-                    </small>
-
-                    <strong class="text-lg"> KSh 9,020,000 </strong>
-                  </div>
-
-                  <a
-                    href="vehicle-details.html?id=1"
-                    class="text-xs font-bold uppercase tracking-wider text-gold hover:text-black transition"
-                  >
-                    View Details
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- MERCEDES C-CLASS -->
-
-            <article
-              class="group bg-gray-100 overflow-hidden border border-gray-200 hover:shadow-2xl transition duration-500"
-            >
-              <div class="relative h-64 overflow-hidden">
-                <img
-                  src="Images/Mercedes Benz C-Class.jpg"
-                  alt="Mercedes-Benz C-Class"
-                  class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-                />
-
-                <span
-                  class="absolute top-4 left-4 bg-gold text-black px-3 py-1 text-xs font-bold uppercase"
-                >
-                  Available
-                </span>
-              </div>
-
-              <div class="p-6">
-                <p class="text-gold text-xs font-bold tracking-wider uppercase">
-                  Luxury
-                </p>
-
-                <h3 class="text-2xl font-bold mt-2">Mercedes-Benz C-Class</h3>
-
-                <div class="flex flex-wrap gap-3 text-sm text-gray-500 mt-4">
-                  <span>2019</span>
-                  <span>•</span>
-                  <span>Automatic</span>
-                  <span>•</span>
-                  <span>Petrol</span>
-                </div>
-
-                <div
-                  class="border-t border-gray-200 mt-6 pt-5 flex items-end justify-between gap-4"
-                >
-                  <div>
-                    <small class="block text-xs text-gray-500 tracking-wider">
-                      PRICE
-                    </small>
-
-                    <strong class="text-lg"> KSh 2,092,000 </strong>
-                  </div>
-
-                  <a
-                    href="vehicle-details.html?id=3"
-                    class="text-xs font-bold uppercase tracking-wider text-gold hover:text-black transition"
-                  >
-                    View Details
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- TOYOTA LAND CRUISER -->
-
-            <article
-              class="group bg-gray-100 overflow-hidden border border-gray-200 hover:shadow-2xl transition duration-500"
-            >
-              <div class="relative h-64 overflow-hidden">
-                <img
-                  src="Images/Toyota Land Cruiser.jpg"
-                  alt="Toyota Land Cruiser"
-                  class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-                />
-
-                <span
-                  class="absolute top-4 left-4 bg-gold text-black px-3 py-1 text-xs font-bold uppercase"
-                >
-                  Available
-                </span>
-              </div>
-
-              <div class="p-6">
-                <p class="text-gold text-xs font-bold tracking-wider uppercase">
-                  SUV
-                </p>
-
-                <h3 class="text-2xl font-bold mt-2">Toyota Land Cruiser</h3>
-
-                <div class="flex flex-wrap gap-3 text-sm text-gray-500 mt-4">
-                  <span>2026</span>
-                  <span>•</span>
-                  <span>Automatic</span>
-                  <span>•</span>
-                  <span>Diesel</span>
-                </div>
-
-                <div
-                  class="border-t border-gray-200 mt-6 pt-5 flex items-end justify-between gap-4"
-                >
-                  <div>
-                    <small class="block text-xs text-gray-500 tracking-wider">
-                      PRICE
-                    </small>
-
-                    <strong class="text-lg"> KSh 11,892,000 </strong>
-                  </div>
-
-                  <a
-                    href="vehicle-details.html?id=4"
-                    class="text-xs font-bold uppercase tracking-wider text-gold hover:text-black transition"
-                  >
-                    View Details
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- RANGE ROVER SPORT -->
-
-            <article
-              class="group bg-gray-100 overflow-hidden border border-gray-200 hover:shadow-2xl transition duration-500"
-            >
-              <div class="relative h-64 overflow-hidden">
-                <img
-                  src="Images/Range Rover.jpg"
-                  alt="Range Rover Sport luxury SUV"
-                  class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-                />
-
-                <span
-                  class="absolute top-4 left-4 bg-gold text-black px-3 py-1 text-xs font-bold uppercase"
-                >
-                  Available
-                </span>
-              </div>
-
-              <div class="p-6">
-                <p class="text-gold text-xs font-bold tracking-wider uppercase">
-                  Luxury SUV
-                </p>
-
-                <h3 class="text-2xl font-bold mt-2">Range Rover Sport</h3>
-
-                <div class="flex flex-wrap gap-3 text-sm text-gray-500 mt-4">
-                  <span>2024</span>
-                  <span>•</span>
-                  <span>Automatic</span>
-                  <span>•</span>
-                  <span>Petrol</span>
-                </div>
-
-                <div
-                  class="border-t border-gray-200 mt-6 pt-5 flex items-end justify-between gap-4"
-                >
-                  <div>
-                    <small class="block text-xs text-gray-500 tracking-wider">
-                      PRICE
-                    </small>
-
-                    <strong class="text-lg"> KSh 14,500,000 </strong>
-                  </div>
-
-                  <a
-                    href="vehicle-details.html?id=5"
-                    class="text-xs font-bold uppercase tracking-wider text-gold hover:text-black transition"
-                  >
-                    View Details
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
+          <div
+            id="home-vehicle-results"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          ></div>
         </div>
       </section>
 
-      <!-- ========================================================= -->
-      <!-- WHY CAR KENYA -->
-      <!-- ========================================================= -->
-
-      <section class="bg-black text-white px-4 sm:px-6 lg:px-10 py-24">
+      <section
+        class="bg-[#0d0d0d] text-white px-4 sm:px-6 lg:px-10 py-24 border-y border-white/5"
+      >
         <div class="max-w-7xl mx-auto">
           <div class="text-center max-w-3xl mx-auto">
             <p class="text-gold text-sm font-bold tracking-[0.25em] uppercase">
@@ -655,7 +414,7 @@
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
           >
             <article
-              class="border border-white/10 p-8 hover:border-gold transition"
+              class="bg-[#111111] border border-white/10 p-8 hover:border-gold transition"
             >
               <span class="text-gold text-4xl font-bold"> 01 </span>
 
@@ -668,7 +427,7 @@
             </article>
 
             <article
-              class="border border-white/10 p-8 hover:border-gold transition"
+              class="bg-[#111111] border border-white/10 p-8 hover:border-gold transition"
             >
               <span class="text-gold text-4xl font-bold"> 02 </span>
 
@@ -681,7 +440,7 @@
             </article>
 
             <article
-              class="border border-white/10 p-8 hover:border-gold transition"
+              class="bg-[#111111] border border-white/10 p-8 hover:border-gold transition"
             >
               <span class="text-gold text-4xl font-bold"> 03 </span>
 
@@ -694,7 +453,7 @@
             </article>
 
             <article
-              class="border border-white/10 p-8 hover:border-gold transition"
+              class="bg-[#111111] border border-white/10 p-8 hover:border-gold transition"
             >
               <span class="text-gold text-4xl font-bold"> 04 </span>
 
@@ -709,13 +468,9 @@
         </div>
       </section>
 
-      <!-- ========================================================= -->
-      <!-- SERVICES -->
-      <!-- ========================================================= -->
-
       <section
         id="services"
-        class="bg-gray-100 text-black px-4 sm:px-6 lg:px-10 py-24"
+        class="bg-dark text-white px-4 sm:px-6 lg:px-10 py-24"
       >
         <div class="max-w-7xl mx-auto">
           <div class="text-center max-w-3xl mx-auto">
@@ -727,7 +482,7 @@
               Automotive Services Built Around You.
             </h2>
 
-            <p class="text-gray-600 mt-5 text-lg leading-relaxed">
+            <p class="text-gray-400 mt-5 text-lg leading-relaxed">
               From finding your next vehicle to sourcing and inspection, Car
               Kenya is here to make the process easier.
             </p>
@@ -737,80 +492,80 @@
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
           >
             <article
-              class="bg-white p-8 border border-gray-200 hover:shadow-xl transition"
+              class="bg-[#111111] p-8 border border-white/10 hover:border-gold hover:-translate-y-1 transition duration-300"
             >
               <span class="text-gold text-4xl font-bold"> 01 </span>
 
               <h3 class="text-2xl font-bold mt-6">Vehicle Sales</h3>
 
-              <p class="text-gray-600 mt-4 leading-relaxed">
+              <p class="text-gray-400 mt-4 leading-relaxed">
                 Explore quality vehicles selected for different lifestyles,
                 budgets and driving needs.
               </p>
 
               <a
                 href="vehicles.html"
-                class="inline-block mt-6 text-sm font-bold uppercase tracking-wider text-gold hover:text-black transition"
+                class="inline-block mt-6 text-sm font-bold uppercase tracking-wider text-gold hover:text-white transition"
               >
                 Explore Vehicles →
               </a>
             </article>
 
             <article
-              class="bg-white p-8 border border-gray-200 hover:shadow-xl transition"
+              class="bg-[#111111] p-8 border border-white/10 hover:border-gold hover:-translate-y-1 transition duration-300"
             >
               <span class="text-gold text-4xl font-bold"> 02 </span>
 
               <h3 class="text-2xl font-bold mt-6">Car Sourcing</h3>
 
-              <p class="text-gray-600 mt-4 leading-relaxed">
+              <p class="text-gray-400 mt-4 leading-relaxed">
                 Tell us the vehicle you want and we can help you find a model
                 that matches your requirements.
               </p>
 
               <a
                 href="contact.html"
-                class="inline-block mt-6 text-sm font-bold uppercase tracking-wider text-gold hover:text-black transition"
+                class="inline-block mt-6 text-sm font-bold uppercase tracking-wider text-gold hover:text-white transition"
               >
                 Request A Vehicle →
               </a>
             </article>
 
             <article
-              class="bg-white p-8 border border-gray-200 hover:shadow-xl transition"
+              class="bg-[#111111] p-8 border border-white/10 hover:border-gold hover:-translate-y-1 transition duration-300"
             >
               <span class="text-gold text-4xl font-bold"> 03 </span>
 
               <h3 class="text-2xl font-bold mt-6">Vehicle Inspection</h3>
 
-              <p class="text-gray-600 mt-4 leading-relaxed">
+              <p class="text-gray-400 mt-4 leading-relaxed">
                 Get assistance with checking important vehicle details before
                 making your purchase.
               </p>
 
               <a
                 href="contact.html"
-                class="inline-block mt-6 text-sm font-bold uppercase tracking-wider text-gold hover:text-black transition"
+                class="inline-block mt-6 text-sm font-bold uppercase tracking-wider text-gold hover:text-white transition"
               >
                 Request Inspection →
               </a>
             </article>
 
             <article
-              class="bg-white p-8 border border-gray-200 hover:shadow-xl transition"
+              class="bg-[#111111] p-8 border border-white/10 hover:border-gold hover:-translate-y-1 transition duration-300"
             >
               <span class="text-gold text-4xl font-bold"> 04 </span>
 
               <h3 class="text-2xl font-bold mt-6">Import Assistance</h3>
 
-              <p class="text-gray-600 mt-4 leading-relaxed">
+              <p class="text-gray-400 mt-4 leading-relaxed">
                 Get guidance when sourcing and importing a vehicle for the
                 Kenyan market.
               </p>
 
               <a
                 href="contact.html"
-                class="inline-block mt-6 text-sm font-bold uppercase tracking-wider text-gold hover:text-black transition"
+                class="inline-block mt-6 text-sm font-bold uppercase tracking-wider text-gold hover:text-white transition"
               >
                 Start Your Request →
               </a>
@@ -819,13 +574,9 @@
         </div>
       </section>
 
-      <!-- ========================================================= -->
-      <!-- ABOUT -->
-      <!-- ========================================================= -->
-
       <section
         id="about"
-        class="bg-white text-black grid grid-cols-1 lg:grid-cols-2"
+        class="bg-[#0d0d0d] text-white grid grid-cols-1 lg:grid-cols-2"
       >
         <div class="h-[400px] sm:h-[500px] lg:h-[650px]">
           <img
@@ -849,7 +600,7 @@
               </span>
             </h2>
 
-            <p class="text-gray-600 mt-8 leading-relaxed text-lg">
+            <p class="text-gray-400 mt-8 leading-relaxed text-lg">
               Car Kenya was created with one goal: to make finding and owning
               your dream vehicle a simple, transparent, and enjoyable
               experience. We connect customers with quality vehicles while
@@ -857,7 +608,7 @@
               dependable automotive services.
             </p>
 
-            <p class="text-gray-600 mt-5 leading-relaxed text-lg">
+            <p class="text-gray-400 mt-5 leading-relaxed text-lg">
               Whether you are looking for a performance car, luxury SUV, family
               vehicle, or a specific imported model, Car Kenya is here to help
               you find a vehicle that matches your lifestyle, preferences, and
@@ -873,10 +624,6 @@
           </div>
         </div>
       </section>
-
-      <!-- ========================================================= -->
-      <!-- CONTACT -->
-      <!-- ========================================================= -->
 
       <section
         id="contact"
@@ -910,7 +657,10 @@
           <form action="contact.html" method="GET" class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label for="name" class="block text-sm font-semibold mb-2">
+                <label
+                  for="name"
+                  class="block text-sm font-semibold mb-2 text-gray-300"
+                >
                   Full Name
                 </label>
 
@@ -920,12 +670,15 @@
                   name="name"
                   placeholder="Your full name"
                   required
-                  class="w-full bg-white/5 border border-white/20 px-4 py-4 text-white placeholder-gray-500 outline-none focus:border-gold transition"
+                  class="w-full bg-[#111111] border border-white/10 px-4 py-4 text-white placeholder-gray-600 outline-none focus:border-gold transition"
                 />
               </div>
 
               <div>
-                <label for="email" class="block text-sm font-semibold mb-2">
+                <label
+                  for="email"
+                  class="block text-sm font-semibold mb-2 text-gray-300"
+                >
                   Email Address
                 </label>
 
@@ -935,45 +688,51 @@
                   name="email"
                   placeholder="you@example.com"
                   required
-                  class="w-full bg-white/5 border border-white/20 px-4 py-4 text-white placeholder-gray-500 outline-none focus:border-gold transition"
+                  class="w-full bg-[#111111] border border-white/10 px-4 py-4 text-white placeholder-gray-600 outline-none focus:border-gold transition"
                 />
               </div>
             </div>
 
             <div>
-              <label for="inquiry" class="block text-sm font-semibold mb-2">
+              <label
+                for="inquiry"
+                class="block text-sm font-semibold mb-2 text-gray-300"
+              >
                 What can we help you with?
               </label>
 
               <select
                 id="inquiry"
                 name="inquiry"
-                class="w-full bg-white/5 border border-white/20 px-4 py-4 text-white outline-none focus:border-gold transition"
+                class="w-full bg-[#111111] border border-white/10 px-4 py-4 text-white outline-none focus:border-gold transition"
               >
-                <option value="vehicle" class="text-black">
+                <option value="vehicle" class="bg-[#111111]">
                   Buying a Vehicle
                 </option>
 
-                <option value="sourcing" class="text-black">
+                <option value="sourcing" class="bg-[#111111]">
                   Car Sourcing
                 </option>
 
-                <option value="inspection" class="text-black">
+                <option value="inspection" class="bg-[#111111]">
                   Vehicle Inspection
                 </option>
 
-                <option value="import" class="text-black">
+                <option value="import" class="bg-[#111111]">
                   Vehicle Import
                 </option>
 
-                <option value="general" class="text-black">
+                <option value="general" class="bg-[#111111]">
                   General Question
                 </option>
               </select>
             </div>
 
             <div>
-              <label for="message" class="block text-sm font-semibold mb-2">
+              <label
+                for="message"
+                class="block text-sm font-semibold mb-2 text-gray-300"
+              >
                 Message
               </label>
 
@@ -982,7 +741,7 @@
                 name="message"
                 rows="6"
                 placeholder="Tell us what vehicle you're looking for..."
-                class="w-full bg-white/5 border border-white/20 px-4 py-4 text-white placeholder-gray-500 outline-none focus:border-gold transition resize-none"
+                class="w-full bg-[#111111] border border-white/10 px-4 py-4 text-white placeholder-gray-600 outline-none focus:border-gold transition resize-none"
               ></textarea>
             </div>
 
@@ -997,17 +756,11 @@
       </section>
     </main>
 
-    <!-- ========================================================= -->
-    <!-- FOOTER -->
-    <!-- ========================================================= -->
-
     <footer
       class="bg-[#050505] text-white border-t border-white/10 px-4 sm:px-6 lg:px-10 pt-16 pb-8"
     >
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-          <!-- BRAND -->
-
           <div>
             <a href="index.html">
               <img
@@ -1022,8 +775,6 @@
               services in Kenya.
             </p>
           </div>
-
-          <!-- EXPLORE -->
 
           <div>
             <h3 class="text-lg font-bold mb-5">Explore</h3>
@@ -1066,8 +817,6 @@
             </div>
           </div>
 
-          <!-- SERVICES -->
-
           <div>
             <h3 class="text-lg font-bold mb-5">Services</h3>
 
@@ -1102,18 +851,14 @@
             </div>
           </div>
 
-          <!-- CONTACT -->
-
           <div>
             <h3 class="text-lg font-bold mb-5">Contact</h3>
 
             <div class="space-y-3 text-gray-500">
               <p>Nairobi, Kenya</p>
 
-              <!-- STANDARDIZED PHONE NUMBER -->
               <p>+254 700 000 000</p>
 
-              <!-- STANDARDIZED EMAIL -->
               <p>info@carkenya.co.ke</p>
 
               <a
@@ -1126,8 +871,6 @@
           </div>
         </div>
 
-        <!-- COPYRIGHT -->
-
         <div
           class="border-t border-white/10 mt-14 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-gray-600"
         >
@@ -1138,7 +881,6 @@
       </div>
     </footer>
 
-    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
   </body>
 </html>

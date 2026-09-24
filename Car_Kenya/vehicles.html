@@ -11,7 +11,6 @@
       content="Explore premium vehicles available through Car Kenya."
     />
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -30,18 +29,12 @@
   </head>
 
   <body class="bg-dark text-white">
-    <!-- ========================================================= -->
-    <!-- HEADER -->
-    <!-- ========================================================= -->
-
     <header
       class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10"
     >
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-20 sm:h-24 flex items-center justify-between"
       >
-        <!-- LOGO -->
-
         <a href="index.html" class="flex items-center">
           <img
             src="Images/CarKenyaLogo.png"
@@ -49,8 +42,6 @@
             class="h-12 sm:h-14 w-auto object-contain"
           />
         </a>
-
-        <!-- DESKTOP NAVIGATION -->
 
         <nav
           class="hidden lg:flex items-center gap-8"
@@ -75,16 +66,12 @@
           </a>
         </nav>
 
-        <!-- DESKTOP CONTACT BUTTON -->
-
         <a
           href="contact.html"
           class="hidden lg:inline-block bg-gold text-black px-6 py-3 font-semibold hover:bg-white transition"
         >
           Get In Touch
         </a>
-
-        <!-- MOBILE MENU BUTTON -->
 
         <button
           id="mobile-menu-button"
@@ -97,10 +84,6 @@
         </button>
       </div>
     </header>
-
-    <!-- ========================================================= -->
-    <!-- MOBILE NAVIGATION -->
-    <!-- ========================================================= -->
 
     <div
       id="mobile-menu"
@@ -154,23 +137,14 @@
       </nav>
     </div>
 
-    <!-- ========================================================= -->
-    <!-- HERO -->
-    <!-- ========================================================= -->
-
     <section class="relative pt-32 sm:pt-40 pb-20 sm:pb-24 overflow-hidden">
-      <!-- BACKGROUND IMAGE -->
-
       <div
-        class="absolute inset-0 bg-cover bg-center"
-        style="background-image: url(&quot;Images/BMW M3.jpg&quot;)"
+        id="home"
+        class="relative min-h-screen flex items-center bg-cover bg-center"
+        style="background-image: url(&quot;Images/Range Rover.jpg&quot;)"
       ></div>
 
-      <!-- OVERLAY -->
-
       <div class="absolute inset-0 bg-black/80"></div>
-
-      <!-- HERO CONTENT -->
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <p
@@ -193,10 +167,6 @@
       </div>
     </section>
 
-    <!-- ========================================================= -->
-    <!-- FILTER SECTION -->
-    <!-- ========================================================= -->
-
     <section class="py-14 sm:py-16 bg-charcoal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div class="mb-10">
@@ -207,14 +177,10 @@
           <h2 class="text-3xl md:text-4xl font-bold">Search Our Collection</h2>
         </div>
 
-        <!-- FILTER FORM -->
-
         <form
           id="vehicle-filter-form"
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
         >
-          <!-- MAKE -->
-
           <div>
             <label for="filter-make" class="block text-sm text-gray-400 mb-2">
               Make
@@ -241,8 +207,6 @@
             </select>
           </div>
 
-          <!-- MODEL -->
-
           <div>
             <label for="filter-model" class="block text-sm text-gray-400 mb-2">
               Model
@@ -257,21 +221,67 @@
 
               <option value="bmw-m3">BMW M3</option>
 
+              <option value="bmw-x7">BMW X7</option>
+
+              <option value="bmw-320i">BMW 320i</option>
+
+              <option value="bmw-m3-g80">BMW M3 G80</option>
+
               <option value="bmw-x5">BMW X5</option>
 
               <option value="mercedes-c-class">Mercedes-Benz C-Class</option>
 
+              <option value="mercedes-g-class">Mercedes Benz G-Class</option>
+
+              <option value="mercedes-e-class">Mercedes-Benz E-Class</option>
+
+              <option value="mercedes-gle-400d">Mercedes-Benz Gle 400d</option>
+
+              <option value="mercedes-cla">Mercedes-Benz Cla</option>
+
               <option value="land-cruiser">Toyota Land Cruiser</option>
+
+              <option value="land-hilux">Toyota Hilux</option>
+
+              <option value="land-colora">Toyota Colora</option>
+
+              <option value="land-prado">Toyota Prado</option>
+
+              <option value="land-camry">Toyota Camry</option>
 
               <option value="range-rover-sport">Range Rover Sport</option>
 
+              <option value="range-rover-discovery">
+                Range Rover Discovery
+              </option>
+
+              <option value="range-rover-defender">Range Rover Defender</option>
+
+              <option value="range-rover-vogue">Range Rover Vogue</option>
+
+              <option value="range-rover-velar">Range Rover Velar</option>
+
               <option value="audi-q5">Audi Q5</option>
 
+              <option value="audi-a3">Audi A3</option>
+
+              <option value="audi-a5">Audi A5</option>
+
+              <option value="audi-rs">Audi RS</option>
+
+              <option value="audi-q7">Audi Q7</option>
+
               <option value="lexus-rx">Lexus RX</option>
+
+              <option value="lexus-es">Lexus ES</option>
+
+              <option value="lexus-lc">Lexus LC</option>
+
+              <option value="lexus-rc">Lexus RC</option>
+
+              <option value="lexus-ux">Lexus UX</option>
             </select>
           </div>
-
-          <!-- YEAR -->
 
           <div>
             <label for="filter-year" class="block text-sm text-gray-400 mb-2">
@@ -295,8 +305,6 @@
               <option value="2019">2019</option>
             </select>
           </div>
-
-          <!-- PRICE -->
 
           <div>
             <label for="filter-price" class="block text-sm text-gray-400 mb-2">
@@ -322,8 +330,6 @@
             </select>
           </div>
 
-          <!-- BUTTONS -->
-
           <div class="lg:col-span-4 flex flex-col sm:flex-row gap-4">
             <button
               type="submit"
@@ -343,10 +349,6 @@
         </form>
       </div>
     </section>
-
-    <!-- ========================================================= -->
-    <!-- VEHICLES -->
-    <!-- ========================================================= -->
 
     <section class="py-16 sm:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
@@ -370,14 +372,10 @@
           </p>
         </div>
 
-        <!-- VEHICLE RESULTS -->
-
         <div
           id="vehicle-results"
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         ></div>
-
-        <!-- NO RESULTS -->
 
         <div id="no-results" class="hidden text-center py-20">
           <div class="max-w-xl mx-auto">
@@ -401,10 +399,6 @@
       </div>
     </section>
 
-    <!-- ========================================================= -->
-    <!-- CTA -->
-    <!-- ========================================================= -->
-
     <section class="py-16 sm:py-20 bg-gold text-black">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
         <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -425,15 +419,9 @@
       </div>
     </section>
 
-    <!-- ========================================================= -->
-    <!-- FOOTER -->
-    <!-- ========================================================= -->
-
     <footer class="bg-black border-t border-white/10 py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          <!-- BRAND -->
-
           <div>
             <img
               src="Images/CarKenyaLogo.png"
@@ -446,8 +434,6 @@
               automotive assistance in Kenya.
             </p>
           </div>
-
-          <!-- QUICK LINKS -->
 
           <div>
             <h3 class="font-bold text-lg mb-5">Quick Links</h3>
@@ -469,8 +455,6 @@
             </div>
           </div>
 
-          <!-- SERVICES -->
-
           <div>
             <h3 class="font-bold text-lg mb-5">Services</h3>
 
@@ -481,8 +465,6 @@
               <p>Import Assistance</p>
             </div>
           </div>
-
-          <!-- CONTACT -->
 
           <div>
             <h3 class="font-bold text-lg mb-5">Contact</h3>
@@ -497,8 +479,6 @@
           </div>
         </div>
 
-        <!-- COPYRIGHT -->
-
         <div
           class="border-t border-white/10 mt-10 pt-6 text-center text-gray-500"
         >
@@ -506,10 +486,6 @@
         </div>
       </div>
     </footer>
-
-    <!-- ========================================================= -->
-    <!-- JAVASCRIPT -->
-    <!-- ========================================================= -->
 
     <script src="script.js"></script>
   </body>
